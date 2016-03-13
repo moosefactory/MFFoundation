@@ -102,6 +102,8 @@
 		BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFoundation_Tests.m; sourceTree = "<group>"; };
 		BC47CC911C948B30005490DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCF768C41C95F6E600DED52C /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		BCF768C51C961CC800DED52C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BCF768C61C961CC800DED52C /* MFFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MFFoundation.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,8 @@
 		BC47CB5C1C944E6D005490DE = {
 			isa = PBXGroup;
 			children = (
+				BCF768C51C961CC800DED52C /* LICENSE */,
+				BCF768C61C961CC800DED52C /* MFFoundation.podspec */,
 				BCF768C41C95F6E600DED52C /* readme.md */,
 				BC47CB671C944E6E005490DE /* MFFoundation */,
 				BC47CC8E1C948B30005490DE /* MFFoundation Tests */,
