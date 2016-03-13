@@ -24,9 +24,7 @@
 #import "MFSecurity.h"
 
 
-#if TARGET_OS_IPHONE
-    #import <UIKit/UIKit.h>
-#else
+#if !TARGET_OS_IPHONE
     #import <IOKit/IOTypes.h>
 #endif
 
