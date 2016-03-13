@@ -21,8 +21,17 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface NSString ( MFExtras )
+    +(NSString*)UUIDString;
+	-(NSString*)md5;
+    -(NSString *)sha1;
+
+    -(BOOL)isValidEmail:(BOOL)strict;
+    -(BOOL)isValidName;
+
+    -(NSString*)urlEncode;
+    -(NSString*)urlDecode;
 
 @end

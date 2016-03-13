@@ -21,8 +21,10 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import "NSArray+MFExtras.h"
+#import "NSData+MFExtras.h"
+#import "NSDate+MFExtras.h"
+#import "NSDictionary+MFExtras.h"
+#import "NSFileManager+MFExtras.h"
+#import "NSString+MFExtras.h"
 
-@implementation MFFoundation
-
-@end

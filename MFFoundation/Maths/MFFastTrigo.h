@@ -21,8 +21,29 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#ifndef MFFastTrigo_MFFastTrigo_h
+#define MFFastTrigo_MFFastTrigo_h
 
-@implementation MFFoundation
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
+#ifdef __c
+    extern {
+#endif
+        
+void buildMFFastTrigoTables();
 
-@end
+double mffsind(long angle);
+double mffcosd(long angle);
+double mfftand(long angle);
+
+#ifdef __cplusplus
+}
+#endif
+        
+#ifdef __c
+}
+#endif
+
+#endif

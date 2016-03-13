@@ -21,8 +21,33 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import "NSUITypes.h"
 
-@implementation MFFoundation
+@interface NSUIColor (Extras)
 
+#pragma mark ---- Value Getters ----
+
+	-(NSString*)hexValueString;
+	-(NSString*)webColorString;
+	-(NSNumber*)longNumber;
+	-(long)longValue;
+
+
+#pragma mark ---- Static Creators with Values ----
+
+    +(NSUIColor*)colorWithHexString:(NSString*)hexValue;
+	+(NSUIColor*)colorWithLongValue:(long)inValue;
+	+(NSUIColor*)colorWithLongNumber:(NSNumber*)inNumber;
+	//+(NSUIColor*)colorWithCGColor:(CGColorRef)color colorSpace:(CGColorSpaceRef)colorSpace;
+
+#pragma mark ---- Comparators ----
+
+	-(NSComparisonResult)compareByLightness:(NSUIColor*)color;
+	-(NSComparisonResult)compareByHue:(NSUIColor*)color;
+	-(NSComparisonResult)compareBySaturation:(NSUIColor*)color;
+
+#pragma mark ---- Utilities -----
+
+    -(NSUIColor*)colorWithNoAlpha;
+    -(NSUIColor*)colorWithAlphaComponentMultipliedBy:(CGFloat)factor;
 @end

@@ -21,8 +21,37 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+#if !BUILD_FOR_MACOS_10_7
+#include <CoreGraphics/CoreGraphics.h>
+#endif
 
-@end
+#ifndef CGGEOMETRY_EXTRAS_H_
+#define CGGEOMETRY_EXTRAS_H_
+
+#pragma mark - CoreGraphics
+
+CGSize  CGSizeWithRatio(CGSize inSize,CGFloat ratio);
+CGSize  CGSizeWithRatios(CGSize inSize,CGFloat ratioh,CGFloat ratiov);
+
+CGRect CGRectHeaderWithRatio(CGRect inRect,CGFloat ratio);
+CGRect CGRectBottomWithRatio(CGRect inRect,CGFloat ratio);
+
+CGRect  CGRectWithRatio(CGRect inRect,CGFloat ratio);
+CGRect  CGRectWithRatios(CGRect inRect,CGFloat ratioh,CGFloat ratiov);
+
+CGPoint CGRectMiddle(CGRect rect);
+void CGRectCenterOnCGRect(CGRect *rect,CGRect onRect);
+
+#pragma mark - Cocoa
+
+#if !TARGET_OS_IPHONE
+
+NSSize  NSSizeWithRatio(NSSize inSize,CGFloat ratio);
+NSPoint NSRectMiddle(NSRect rect);
+void    NSRectCenterOnNSRect(NSRect *rect,NSRect onRect);
+
+#endif
+
+#endif

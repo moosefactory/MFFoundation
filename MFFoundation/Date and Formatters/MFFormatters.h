@@ -21,8 +21,40 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface MFMoneyFormatter : NSNumberFormatter
+
++(MFMoneyFormatter*)defaultMoneyFormatter;
++(MFMoneyFormatter*)moneyFormatter;
+
++(NSString*)stringFromFloat:(float)value;
++(NSString*)stringFromNumber:(NSNumber*)value;
+-(NSString*)stringFromFloat:(float)value;
+
+@end
+
+@interface MFDateFormatter : NSDateFormatter
+
++(MFDateFormatter*)defaultDateFormatter;
++(MFDateFormatter*)dateFormatter;
+
++(NSString*)stringFromDate:(NSDate*)date;
+-(NSString*)stringFromDate:(NSDate*)date;
+
+@end
+
+
+@interface MFTimesFormatter : NSFormatter
+
++(MFTimesFormatter*)defaultTimesFormatter;
++(MFTimesFormatter*)timesFormatter;
+
++(NSString*)stringFromInteger:(NSInteger)value;
+-(NSString*)stringFromInteger:(NSInteger)value;
+
+@property(nonatomic,strong) NSString* singular;
+@property(nonatomic,strong) NSString* plural;
+@property(nonatomic,strong) NSString* none;
 
 @end

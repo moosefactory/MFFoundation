@@ -21,8 +21,34 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import "NSFileManager+MFExtras.h"
+    
+@implementation NSFileManager (MFExtras)
 
-@implementation MFFoundation
+-(BOOL)isDirectoryEmpty:(NSString*)path containsOnlyInvisibleFiles:(BOOL*)containsOnlyInvisibleFiles
+{
+    BOOL isDir;
+    if ( [self fileExistsAtPath:path isDirectory:&isDir] ) {
+        if (isDir) {
+            NSError*    error;
+            NSArray* contents = [self contentsOfDirectoryAtPath:path error:&error];
+            if (!contents || !contents.count) return true
+                ;
+            for (NSString* aFolderItem in contents) {
+                if ( ![self isDirectoryEmpty:[path stringByAppendingPathComponent:aFolderItem] containsOnlyInvisibleFiles:containsOnlyInvisibleFiles] ) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else {
+            if (![[[path lastPathComponent] substringToIndex:1] isEqualToString:@"."]) {
+                *containsOnlyInvisibleFiles = NO;
+            }
+            return false;
+        }
+    }
+    return false;
+}
 
 @end

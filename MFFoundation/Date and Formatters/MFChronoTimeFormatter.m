@@ -21,8 +21,27 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import "MFChronoTimeFormatter.h"
 
-@implementation MFFoundation
+
+@implementation MFChronoTimeFormatter
+
+-(NSString*)stringForObjectValue:(id)object
+{
+	long time=[object longValue];
+	long	time_sec = time / 10;
+	long h = time_sec / 3600;
+	time_sec -= h*3600;
+	long m = time_sec / 60;
+	time_sec -= m*60;
+	long s = time_sec;
+	
+	NSString	*timeStr = [[NSString alloc] init];
+	if ( h > 0 ) timeStr = [timeStr stringByAppendingFormat:@"%li:",h];
+	if ( m > 0 ) timeStr = [timeStr stringByAppendingFormat:@"%02li:",m];
+	timeStr = [timeStr stringByAppendingFormat:@"%02li.%li",s,time%10];
+
+	return timeStr;
+}
 
 @end

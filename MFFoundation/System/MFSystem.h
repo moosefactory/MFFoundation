@@ -21,8 +21,35 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface MFSystem : NSObject
+
++(NSString*)machine;
++(NSString*)model;
++(NSString*)cpu;
++(NSInteger)byteorder;
++(NSString*)architecture;
+
++(NSString*)kernelVersion;
++(NSString*)kernelRelease;
++(NSString*)kernelRevision;
+
++(NSString*)systemVersion;
++(NSString*)systemVersionPatch;
+
++(float)systemVersionFloat;
++(float)systemVersionPatchFloat;
+
+#pragma mark -
+
+// There is usually no reason to compare patch version
+// If you need to do it ( to go around a very particular bug for example ), compare systemVersionPatchFloat using comparison signs
+
++(BOOL)systemVersionPriorTo:(NSString*)systemVersion;
+
++(BOOL)systemVersionPriorOrEqualTo:(NSString*)systemVersion;
+
++(BOOL)systemVersionEqualTo:(NSString*)systemVersion;
 
 @end

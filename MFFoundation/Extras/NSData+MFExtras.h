@@ -21,8 +21,13 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface NSData (MFExtras)
+
++(NSData*)dataWithBytesString:(NSString*)bytesString;
+-(NSString*)bytesString;
+
++(NSData *)randomDataOfLength:(NSUInteger)length;
 
 @end

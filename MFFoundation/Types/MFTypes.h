@@ -21,8 +21,18 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#ifndef MFTypes_h
+#define MFTypes_h
 
-@implementation MFFoundation
+typedef struct {
+    char chars[2];
+} MFCountryCode;
 
-@end
+typedef struct {
+    double longitude;
+    double latitude;
+    double altitude;
+} MFLocation;
+
+
+#endif /* MFTypes_h */

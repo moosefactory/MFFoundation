@@ -21,8 +21,29 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface MFDateRange : NSObject
+
++(id)dateRangeWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
+-(id)initWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
+
++(id)dateRangeWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+-(id)initWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+
+-(BOOL)containsDayWithComponents:(NSDateComponents*)comps inCalendar:(NSCalendar*)cal;
+-(BOOL)containsDate:(NSDate*)date;
+
+-(void)startHour:(NSUInteger*)hours minutes:(NSUInteger*)minutes;
+-(void)endHour:(NSUInteger*)hours minutes:(NSUInteger*)minutes;
+
+
+-(NSTimeInterval)duration;
+
+@property(nonatomic,strong) NSDate* startDate;
+@property(nonatomic,strong) NSDate* endDate;
+
+@property(nonatomic,assign) NSUInteger  startHour;
+@property(nonatomic,assign) NSUInteger  endHour;
 
 @end

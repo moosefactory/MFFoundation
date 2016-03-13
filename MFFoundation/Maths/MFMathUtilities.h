@@ -21,8 +21,34 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#include <stdio.h>
+#include <math.h>
 
-@implementation MFFoundation
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-@end
+extern  const float kPiOnThree;
+extern  const float kTwoPiOnThree;
+
+float MF_clampOne(float f);
+float MF_modf(float x,float d);
+float MF_clampAngle(float angle);
+
+double mfpsin(double angle);
+double mfpcos(double angle);
+
+float MF_maxf(float f1, float f2);
+float MF_minf(float f1, float f2);
+
+float MF_max3f(float f1, float f2, float f3);
+float MF_min3f(float f1, float f2, float f3);
+
+void MF_cartesianToPolar(float x,float y, float* teta,float *phi);
+void MF_polarToCartesian(float teta,float phi,float *x, float *y);
+
+#ifdef __cplusplus
+}
+#endif
+
+

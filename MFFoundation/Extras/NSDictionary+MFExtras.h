@@ -21,8 +21,16 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface NSDictionary (MFExtras)
+
++(NSDictionary*)dictionaryWithName:(NSString*)name;
++(NSDictionary*)dictionaryWithName:(NSString*)name type:(NSString*)type;
+
++(NSDictionary*)localizedDictionaryWithName:(NSString*)name;
++(NSDictionary*)localizedDictionaryWithName:(NSString*)name type:(NSString*)type;
+
+-(NSArray*)alphabeticallySortedKeys;
 
 @end

@@ -21,8 +21,15 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#ifndef __MoofFoundation__MFSecurity__
+#define __MoofFoundation__MFSecurity__
 
-@implementation MFFoundation
+#include <stdio.h>
+#import <Foundation/Foundation.h>
+#import <Security/Security.h>
 
-@end
+CFDataRef copy_mac_address(void);
+SecCertificateRef AppleRootCA( void );
+bool check_code_signature();
+
+#endif /* defined(__Pixelizator__MFSecurity__) */

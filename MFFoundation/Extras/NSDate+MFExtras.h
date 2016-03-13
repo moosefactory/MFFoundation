@@ -21,8 +21,24 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@implementation MFFoundation
+@interface NSDate (MFExtras)
+
+-(NSDate*)dateByClearingTime;
+-(NSDate*)dateBySettingHour:(NSUInteger)hour minute:(NSUInteger)minute;
+
+-(BOOL)isSameDayAsDate:(NSDate*)date;
+-(BOOL)isSameMonthAsDate:(NSDate*)date;
+
+-(NSDate*)oneMonthLater;
+-(NSDate*)oneMonthEarlier;
+
+-(NSDate*)oneDayEarlier;
+-(NSDate*)oneDayLater;
+
+-(NSUInteger)secondsSinceStartOfDay;
+-(NSDateComponents*)components;
 
 @end

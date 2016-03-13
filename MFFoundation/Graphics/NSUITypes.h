@@ -21,8 +21,37 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#ifndef MoofLibrary_MoofNSUITypes_h
+#define MoofLibrary_MoofNSUITypes_h
 
-@implementation MFFoundation
+#import <Foundation/NSObject.h>
 
-@end
+#if TARGET_OS_IPHONE
+    #import <UIKit/UIKit.h>
+
+    #define NSUIColor           UIColor
+    #define NSUIColorSpace      UIColorSpace
+
+    #define NSUIImage           UIImage
+
+    #define NSUIFont            UIFont
+    #define NSUIControl         UIControl
+    #define NSUILabel           UILabel
+    #define NSUIView            UIView
+    #define NSUIViewController  UIViewController
+#else
+    #import <Cocoa/Cocoa.h>
+
+    #define NSUIColor           NSColor
+    #define NSUIColorSpace      NSColorSpace
+
+    #define NSUIImage           NSImage
+
+    #define NSUIFont            NSFont
+    #define NSUIControl         NSControl
+    #define NSUILabel           NSTextField
+    #define NSUIView            NSView
+    #define NSUIViewController  NSViewController
+#endif
+
+#endif

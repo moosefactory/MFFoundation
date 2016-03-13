@@ -21,8 +21,41 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+typedef enum {
+    MFDaysSelector_Monday       = 1,
+    MFDaysSelector_Tuesday      = 2,
+    MFDaysSelector_Wedenesday   = 4,
+    MFDaysSelector_Thursday     = 8,
+    MFDaysSelector_Friday       = 16,
+    MFDaysSelector_Saturday     = 32,
+    MFDaysSelector_Sunday       = 64
+} MFDaysSelectorFlag;
+
+typedef NSUInteger MFDaysSelectorMask;
+
+const extern MFDaysSelectorMask    MFDaysSelectorWorkingDays;
+const extern MFDaysSelectorMask    MFDaysSelectorWeekEndDays;
+const extern MFDaysSelectorMask    MFDaysSelectorEveryDay;
+const extern MFDaysSelectorMask    MFDaysSelectorNoDays;
+
+@interface MFDateUtils : NSObject
+
+// Formatters
+
++(NSDateFormatter*)rfc3339DateFormatter;
++(NSDateFormatter*)shortDateFormatter;
+
+// Utils
+
++(NSDate*)dayStartDate;
++(NSDate*)weekStartDate;
++(NSDate*)previousWeekStartDate;
++(NSDate*)yesterdayStartDate;
+
++(NSDate*)beginOfMonthDateForDate:(NSDate*)date;
++(NSDate*)endOfMonthDateForDate:(NSDate*)date;
+
 
 @end

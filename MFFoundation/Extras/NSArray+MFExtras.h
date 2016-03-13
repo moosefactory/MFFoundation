@@ -21,8 +21,13 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+@interface NSArray (MFExtras)
+
+-(NSArray*)arrayByRemovingLastObject;
+-(NSArray*)arrayByRemovingFirstObject;
+
+-(NSArray*)alphabeticallySortedArray;
 
 @end

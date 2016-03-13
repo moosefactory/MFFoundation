@@ -21,8 +21,22 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+#import "MFDateRange.h"
+
+@interface MFPeriod : NSObject
+
++(id)periodWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
+-(id)initWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
+
++(id)periodWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+-(id)initWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+
+-(BOOL)containsDate:(NSDate*)date master:(BOOL*)master;
+
+
+    @property(nonatomic,strong) MFDateRange*    dateRange;
+    @property(nonatomic,assign) NSUInteger      periodicity;
 
 @end

@@ -21,8 +21,39 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#ifndef MooseFactoryFramework_MFCombinedColor_h
+#define MooseFactoryFramework_MFCombinedColor_h
 
-@implementation MFFoundation
 
-@end
+extern const float kMFBlackColor[];
+extern const float kMFDarkGrayColor[];
+extern const float kMFGrayColor[];
+extern const float kMFLightGrayColor[];
+extern const float kMFWhiteColor[];
+
+extern const float kMFBlueColor[];
+extern const float kMFRedColor[];
+extern const float kMFGreenColor[];
+
+extern const float kMFBlackColor_A50[];
+extern const float kMFWhiteColor_A50[];
+extern const float kMFBlackColor_A75[];
+extern const float kMFWhiteColor_A75[];
+extern const float kMFBlackColor_A25[];
+extern const float kMFWhiteColor_A25[];
+
+
+typedef struct {
+    float r,g,b;
+    float a;
+    float h,s,l;
+} MFCGICombinedColor;
+
+
+void MFCGICombinedColorSetRGBA(MFCGICombinedColor *combinedColor, float r,float g,float b,float a);
+void MFCGICombinedColorSetHSL(MFCGICombinedColor *combinedColor, float h,float s,float l);
+
+void RGBToHSL(float r,float g,float b,float *h,float *s,float *l);
+void HSLToRGB(float h,float s,float l,float *r,float *g,float *b);
+
+#endif

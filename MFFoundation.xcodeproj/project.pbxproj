@@ -9,7 +9,53 @@
 /* Begin PBXBuildFile section */
 		BC47CB691C944E6F005490DE /* MFFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; };
 		BC47CB6B1C944E6F005490DE /* MFFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB6A1C944E6F005490DE /* MFFoundation.m */; };
+		BC47CB9F1C945056005490DE /* NSArray+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB781C945056005490DE /* NSArray+MFExtras.m */; };
+		BC47CBA01C945056005490DE /* NSData+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7A1C945056005490DE /* NSData+MFExtras.m */; };
+		BC47CBA11C945056005490DE /* NSDate+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7C1C945056005490DE /* NSDate+MFExtras.m */; };
+		BC47CBA21C945056005490DE /* NSDictionary+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7E1C945056005490DE /* NSDictionary+MFExtras.m */; };
+		BC47CBA31C945056005490DE /* NSFileManager+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB801C945056005490DE /* NSFileManager+MFExtras.m */; };
+		BC47CBA41C945056005490DE /* NSString+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB821C945056005490DE /* NSString+MFExtras.m */; };
+		BC47CBA51C945056005490DE /* MFChronoTimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB851C945056005490DE /* MFChronoTimeFormatter.m */; };
+		BC47CBA61C945056005490DE /* MFDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB871C945056005490DE /* MFDateUtils.m */; };
+		BC47CBA71C945056005490DE /* MFFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB891C945056005490DE /* MFFormatters.m */; };
+		BC47CBA81C945056005490DE /* MFLatLongFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB8B1C945056005490DE /* MFLatLongFormatter.m */; };
+		BC47CBAA1C945056005490DE /* MFDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB901C945056005490DE /* MFDateRange.m */; };
+		BC47CBAB1C945056005490DE /* MFPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB921C945056005490DE /* MFPeriod.m */; };
+		BC47CBAC1C945056005490DE /* MFFastTrigo.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB961C945056005490DE /* MFFastTrigo.c */; };
+		BC47CBAD1C945056005490DE /* MFMathUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB981C945056005490DE /* MFMathUtilities.c */; };
+		BC47CBAE1C945056005490DE /* MFSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB9C1C945056005490DE /* MFSecurity.m */; };
+		BC47CBB21C9451AA005490DE /* MFSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CBB11C9451AA005490DE /* MFSystem.m */; };
+		BC47CBEE1C945E5B005490DE /* MFTypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CBED1C945D9C005490DE /* MFTypes.h */; };
+		BC47CC701C948445005490DE /* MFFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC47CC711C948448005490DE /* MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB761C945056005490DE /* MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC47CC721C948458005490DE /* NSArray+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB771C945056005490DE /* NSArray+MFExtras.h */; };
+		BC47CC731C948458005490DE /* NSData+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB791C945056005490DE /* NSData+MFExtras.h */; };
+		BC47CC741C948458005490DE /* NSDate+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7B1C945056005490DE /* NSDate+MFExtras.h */; };
+		BC47CC751C948458005490DE /* NSDictionary+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7D1C945056005490DE /* NSDictionary+MFExtras.h */; };
+		BC47CC761C948458005490DE /* NSFileManager+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7F1C945056005490DE /* NSFileManager+MFExtras.h */; };
+		BC47CC771C948458005490DE /* NSString+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB811C945056005490DE /* NSString+MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC47CC821C94852C005490DE /* CGExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CC7B1C94852C005490DE /* CGExtras.h */; };
+		BC47CC831C94852C005490DE /* CGExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC7C1C94852C005490DE /* CGExtras.m */; };
+		BC47CC841C94852C005490DE /* Color-Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CC7D1C94852C005490DE /* Color-Extras.h */; };
+		BC47CC851C94852C005490DE /* Color-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC7E1C94852C005490DE /* Color-Extras.m */; };
+		BC47CC861C94852C005490DE /* MFCombinedColor.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC7F1C94852C005490DE /* MFCombinedColor.c */; };
+		BC47CC871C94852C005490DE /* MFCombinedColor.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CC801C94852C005490DE /* MFCombinedColor.h */; };
+		BC47CC881C94852C005490DE /* NSUITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CC811C94852C005490DE /* NSUITypes.h */; };
+		BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */; };
+		BC47CC921C948B30005490DE /* libMFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47CB651C944E6E005490DE /* libMFFoundation.a */; };
+		BC47CC981C958011005490DE /* MFSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB9B1C945056005490DE /* MFSecurity.h */; };
+		BC47CC991C95801C005490DE /* MFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CBB01C9451AA005490DE /* MFSystem.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC47CC931C948B30005490DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC47CB5D1C944E6D005490DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC47CB641C944E6E005490DE;
+			remoteInfo = MFFoundation;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BC47CB631C944E6E005490DE /* CopyFiles */ = {
@@ -18,6 +64,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				BC47CBEE1C945E5B005490DE /* MFTypes.h in CopyFiles */,
 				BC47CB691C944E6F005490DE /* MFFoundation.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -28,6 +75,50 @@
 		BC47CB651C944E6E005490DE /* libMFFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMFFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC47CB681C944E6F005490DE /* MFFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFFoundation.h; sourceTree = "<group>"; };
 		BC47CB6A1C944E6F005490DE /* MFFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFoundation.m; sourceTree = "<group>"; };
+		BC47CB761C945056005490DE /* MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFExtras.h; sourceTree = "<group>"; };
+		BC47CB771C945056005490DE /* NSArray+MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MFExtras.h"; sourceTree = "<group>"; };
+		BC47CB781C945056005490DE /* NSArray+MFExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MFExtras.m"; sourceTree = "<group>"; };
+		BC47CB791C945056005490DE /* NSData+MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MFExtras.h"; sourceTree = "<group>"; };
+		BC47CB7A1C945056005490DE /* NSData+MFExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MFExtras.m"; sourceTree = "<group>"; };
+		BC47CB7B1C945056005490DE /* NSDate+MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MFExtras.h"; sourceTree = "<group>"; };
+		BC47CB7C1C945056005490DE /* NSDate+MFExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MFExtras.m"; sourceTree = "<group>"; };
+		BC47CB7D1C945056005490DE /* NSDictionary+MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MFExtras.h"; sourceTree = "<group>"; };
+		BC47CB7E1C945056005490DE /* NSDictionary+MFExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MFExtras.m"; sourceTree = "<group>"; };
+		BC47CB7F1C945056005490DE /* NSFileManager+MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+MFExtras.h"; sourceTree = "<group>"; };
+		BC47CB801C945056005490DE /* NSFileManager+MFExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+MFExtras.m"; sourceTree = "<group>"; };
+		BC47CB811C945056005490DE /* NSString+MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MFExtras.h"; sourceTree = "<group>"; };
+		BC47CB821C945056005490DE /* NSString+MFExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MFExtras.m"; sourceTree = "<group>"; };
+		BC47CB841C945056005490DE /* MFChronoTimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFChronoTimeFormatter.h; sourceTree = "<group>"; };
+		BC47CB851C945056005490DE /* MFChronoTimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFChronoTimeFormatter.m; sourceTree = "<group>"; };
+		BC47CB861C945056005490DE /* MFDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFDateUtils.h; sourceTree = "<group>"; };
+		BC47CB871C945056005490DE /* MFDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFDateUtils.m; sourceTree = "<group>"; };
+		BC47CB881C945056005490DE /* MFFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFormatters.h; sourceTree = "<group>"; };
+		BC47CB891C945056005490DE /* MFFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFFormatters.m; sourceTree = "<group>"; };
+		BC47CB8A1C945056005490DE /* MFLatLongFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLatLongFormatter.h; sourceTree = "<group>"; };
+		BC47CB8B1C945056005490DE /* MFLatLongFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLatLongFormatter.m; sourceTree = "<group>"; };
+		BC47CB8F1C945056005490DE /* MFDateRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFDateRange.h; sourceTree = "<group>"; };
+		BC47CB901C945056005490DE /* MFDateRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFDateRange.m; sourceTree = "<group>"; };
+		BC47CB911C945056005490DE /* MFPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPeriod.h; sourceTree = "<group>"; };
+		BC47CB921C945056005490DE /* MFPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPeriod.m; sourceTree = "<group>"; };
+		BC47CB961C945056005490DE /* MFFastTrigo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFFastTrigo.c; sourceTree = "<group>"; };
+		BC47CB971C945056005490DE /* MFFastTrigo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFastTrigo.h; sourceTree = "<group>"; };
+		BC47CB981C945056005490DE /* MFMathUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFMathUtilities.c; sourceTree = "<group>"; };
+		BC47CB991C945056005490DE /* MFMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMathUtilities.h; sourceTree = "<group>"; };
+		BC47CB9B1C945056005490DE /* MFSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSecurity.h; sourceTree = "<group>"; };
+		BC47CB9C1C945056005490DE /* MFSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSecurity.m; sourceTree = "<group>"; };
+		BC47CBB01C9451AA005490DE /* MFSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSystem.h; sourceTree = "<group>"; };
+		BC47CBB11C9451AA005490DE /* MFSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSystem.m; sourceTree = "<group>"; };
+		BC47CBED1C945D9C005490DE /* MFTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFTypes.h; sourceTree = "<group>"; };
+		BC47CC7B1C94852C005490DE /* CGExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGExtras.h; sourceTree = "<group>"; };
+		BC47CC7C1C94852C005490DE /* CGExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGExtras.m; sourceTree = "<group>"; };
+		BC47CC7D1C94852C005490DE /* Color-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Color-Extras.h"; sourceTree = "<group>"; };
+		BC47CC7E1C94852C005490DE /* Color-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Color-Extras.m"; sourceTree = "<group>"; };
+		BC47CC7F1C94852C005490DE /* MFCombinedColor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFCombinedColor.c; sourceTree = "<group>"; };
+		BC47CC801C94852C005490DE /* MFCombinedColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCombinedColor.h; sourceTree = "<group>"; };
+		BC47CC811C94852C005490DE /* NSUITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUITypes.h; sourceTree = "<group>"; };
+		BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MFFoundation Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFoundation_Tests.m; sourceTree = "<group>"; };
+		BC47CC911C948B30005490DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +129,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC47CC8A1C948B2F005490DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC47CC921C948B30005490DE /* libMFFoundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BC47CB671C944E6E005490DE /* MFFoundation */,
+				BC47CC8E1C948B30005490DE /* MFFoundation Tests */,
 				BC47CB661C944E6E005490DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				BC47CB651C944E6E005490DE /* libMFFoundation.a */,
+				BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,11 +163,141 @@
 			children = (
 				BC47CB681C944E6F005490DE /* MFFoundation.h */,
 				BC47CB6A1C944E6F005490DE /* MFFoundation.m */,
+				BC47CB711C945056005490DE /* Extras */,
+				BC47CB831C945056005490DE /* Date and Formatters */,
+				BC47CC7A1C94852C005490DE /* Graphics */,
+				BC47CB8C1C945056005490DE /* Types */,
+				BC47CB951C945056005490DE /* Maths */,
+				BC47CB9A1C945056005490DE /* Security */,
+				BC47CBAF1C945179005490DE /* System */,
 			);
 			path = MFFoundation;
 			sourceTree = "<group>";
 		};
+		BC47CB711C945056005490DE /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CB761C945056005490DE /* MFExtras.h */,
+				BC47CB771C945056005490DE /* NSArray+MFExtras.h */,
+				BC47CB781C945056005490DE /* NSArray+MFExtras.m */,
+				BC47CB791C945056005490DE /* NSData+MFExtras.h */,
+				BC47CB7A1C945056005490DE /* NSData+MFExtras.m */,
+				BC47CB7B1C945056005490DE /* NSDate+MFExtras.h */,
+				BC47CB7C1C945056005490DE /* NSDate+MFExtras.m */,
+				BC47CB7D1C945056005490DE /* NSDictionary+MFExtras.h */,
+				BC47CB7E1C945056005490DE /* NSDictionary+MFExtras.m */,
+				BC47CB7F1C945056005490DE /* NSFileManager+MFExtras.h */,
+				BC47CB801C945056005490DE /* NSFileManager+MFExtras.m */,
+				BC47CB811C945056005490DE /* NSString+MFExtras.h */,
+				BC47CB821C945056005490DE /* NSString+MFExtras.m */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		BC47CB831C945056005490DE /* Date and Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CB841C945056005490DE /* MFChronoTimeFormatter.h */,
+				BC47CB851C945056005490DE /* MFChronoTimeFormatter.m */,
+				BC47CB861C945056005490DE /* MFDateUtils.h */,
+				BC47CB871C945056005490DE /* MFDateUtils.m */,
+				BC47CB881C945056005490DE /* MFFormatters.h */,
+				BC47CB891C945056005490DE /* MFFormatters.m */,
+				BC47CB8A1C945056005490DE /* MFLatLongFormatter.h */,
+				BC47CB8B1C945056005490DE /* MFLatLongFormatter.m */,
+			);
+			path = "Date and Formatters";
+			sourceTree = "<group>";
+		};
+		BC47CB8C1C945056005490DE /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CBED1C945D9C005490DE /* MFTypes.h */,
+				BC47CB8F1C945056005490DE /* MFDateRange.h */,
+				BC47CB901C945056005490DE /* MFDateRange.m */,
+				BC47CB911C945056005490DE /* MFPeriod.h */,
+				BC47CB921C945056005490DE /* MFPeriod.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		BC47CB951C945056005490DE /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CB961C945056005490DE /* MFFastTrigo.c */,
+				BC47CB971C945056005490DE /* MFFastTrigo.h */,
+				BC47CB981C945056005490DE /* MFMathUtilities.c */,
+				BC47CB991C945056005490DE /* MFMathUtilities.h */,
+			);
+			path = Maths;
+			sourceTree = "<group>";
+		};
+		BC47CB9A1C945056005490DE /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CB9B1C945056005490DE /* MFSecurity.h */,
+				BC47CB9C1C945056005490DE /* MFSecurity.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		BC47CBAF1C945179005490DE /* System */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CBB01C9451AA005490DE /* MFSystem.h */,
+				BC47CBB11C9451AA005490DE /* MFSystem.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		BC47CC7A1C94852C005490DE /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CC7B1C94852C005490DE /* CGExtras.h */,
+				BC47CC7C1C94852C005490DE /* CGExtras.m */,
+				BC47CC7D1C94852C005490DE /* Color-Extras.h */,
+				BC47CC7E1C94852C005490DE /* Color-Extras.m */,
+				BC47CC7F1C94852C005490DE /* MFCombinedColor.c */,
+				BC47CC801C94852C005490DE /* MFCombinedColor.h */,
+				BC47CC811C94852C005490DE /* NSUITypes.h */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		BC47CC8E1C948B30005490DE /* MFFoundation Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */,
+				BC47CC911C948B30005490DE /* Info.plist */,
+			);
+			path = "MFFoundation Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BC47CC6F1C948440005490DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC47CC701C948445005490DE /* MFFoundation.h in Headers */,
+				BC47CC881C94852C005490DE /* NSUITypes.h in Headers */,
+				BC47CC771C948458005490DE /* NSString+MFExtras.h in Headers */,
+				BC47CC841C94852C005490DE /* Color-Extras.h in Headers */,
+				BC47CC821C94852C005490DE /* CGExtras.h in Headers */,
+				BC47CC711C948448005490DE /* MFExtras.h in Headers */,
+				BC47CC721C948458005490DE /* NSArray+MFExtras.h in Headers */,
+				BC47CC731C948458005490DE /* NSData+MFExtras.h in Headers */,
+				BC47CC741C948458005490DE /* NSDate+MFExtras.h in Headers */,
+				BC47CC751C948458005490DE /* NSDictionary+MFExtras.h in Headers */,
+				BC47CC761C948458005490DE /* NSFileManager+MFExtras.h in Headers */,
+				BC47CC871C94852C005490DE /* MFCombinedColor.h in Headers */,
+				BC47CC981C958011005490DE /* MFSecurity.h in Headers */,
+				BC47CC991C95801C005490DE /* MFSystem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		BC47CB641C944E6E005490DE /* MFFoundation */ = {
@@ -76,6 +307,7 @@
 				BC47CB611C944E6E005490DE /* Sources */,
 				BC47CB621C944E6E005490DE /* Frameworks */,
 				BC47CB631C944E6E005490DE /* CopyFiles */,
+				BC47CC6F1C948440005490DE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -85,6 +317,24 @@
 			productName = MFFoundation;
 			productReference = BC47CB651C944E6E005490DE /* libMFFoundation.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		BC47CC8C1C948B2F005490DE /* MFFoundation Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC47CC951C948B30005490DE /* Build configuration list for PBXNativeTarget "MFFoundation Tests" */;
+			buildPhases = (
+				BC47CC891C948B2F005490DE /* Sources */,
+				BC47CC8A1C948B2F005490DE /* Frameworks */,
+				BC47CC8B1C948B2F005490DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC47CC941C948B30005490DE /* PBXTargetDependency */,
+			);
+			name = "MFFoundation Tests";
+			productName = "MFFoundation Tests";
+			productReference = BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +346,9 @@
 				ORGANIZATIONNAME = MooseFactory;
 				TargetAttributes = {
 					BC47CB641C944E6E005490DE = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					BC47CC8C1C948B2F005490DE = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -113,20 +366,66 @@
 			projectRoot = "";
 			targets = (
 				BC47CB641C944E6E005490DE /* MFFoundation */,
+				BC47CC8C1C948B2F005490DE /* MFFoundation Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC47CC8B1C948B2F005490DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC47CB611C944E6E005490DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC47CBA61C945056005490DE /* MFDateUtils.m in Sources */,
+				BC47CC861C94852C005490DE /* MFCombinedColor.c in Sources */,
+				BC47CBA11C945056005490DE /* NSDate+MFExtras.m in Sources */,
+				BC47CBA81C945056005490DE /* MFLatLongFormatter.m in Sources */,
+				BC47CC851C94852C005490DE /* Color-Extras.m in Sources */,
+				BC47CBA51C945056005490DE /* MFChronoTimeFormatter.m in Sources */,
+				BC47CBAD1C945056005490DE /* MFMathUtilities.c in Sources */,
+				BC47CBAA1C945056005490DE /* MFDateRange.m in Sources */,
+				BC47CBA21C945056005490DE /* NSDictionary+MFExtras.m in Sources */,
+				BC47CBA31C945056005490DE /* NSFileManager+MFExtras.m in Sources */,
+				BC47CB9F1C945056005490DE /* NSArray+MFExtras.m in Sources */,
+				BC47CBAB1C945056005490DE /* MFPeriod.m in Sources */,
+				BC47CBB21C9451AA005490DE /* MFSystem.m in Sources */,
+				BC47CBA01C945056005490DE /* NSData+MFExtras.m in Sources */,
+				BC47CBAE1C945056005490DE /* MFSecurity.m in Sources */,
+				BC47CBAC1C945056005490DE /* MFFastTrigo.c in Sources */,
+				BC47CC831C94852C005490DE /* CGExtras.m in Sources */,
 				BC47CB6B1C944E6F005490DE /* MFFoundation.m in Sources */,
+				BC47CBA41C945056005490DE /* NSString+MFExtras.m in Sources */,
+				BC47CBA71C945056005490DE /* MFFormatters.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC47CC891C948B2F005490DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC47CC941C948B30005490DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC47CB641C944E6E005490DE /* MFFoundation */;
+			targetProxy = BC47CC931C948B30005490DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BC47CB6C1C944E6F005490DE /* Debug */ = {
@@ -151,13 +450,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_MFFoundation_Modular_Headers_=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -165,7 +465,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -194,15 +496,19 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "_MFFoundation_Modular_Headers_=0";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -212,18 +518,52 @@
 		BC47CB6F1C944E6F005490DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
 		BC47CB701C944E6F005490DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		BC47CC961C948B30005490DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MFFoundation Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.moosefactory.MFFoundation-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC47CC971C948B30005490DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "MFFoundation Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.moosefactory.MFFoundation-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -246,6 +586,16 @@
 				BC47CB701C944E6F005490DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC47CC951C948B30005490DE /* Build configuration list for PBXNativeTarget "MFFoundation Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC47CC961C948B30005490DE /* Debug */,
+				BC47CC971C948B30005490DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

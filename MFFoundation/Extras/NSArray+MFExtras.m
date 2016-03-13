@@ -21,8 +21,37 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import "NSArray+MFExtras.h"
 
-@implementation MFFoundation
+@implementation NSArray (MFExtras)
+
+-(NSArray*)arrayByRemovingLastObject
+{
+    NSUInteger count = self.count;
+    if (count==0) return self;
+    count--;
+    NSMutableArray* array = [NSMutableArray arrayWithCapacity:count];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (idx<count) [array addObject:obj];
+    }];
+    return [NSArray arrayWithArray:array];
+}
+
+-(NSArray*)arrayByRemovingFirstObject
+{
+    if (self.count==0) return self;
+    NSMutableArray* array = [NSMutableArray arrayWithCapacity:self.count-1];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (idx>0) [array addObject:obj];
+    }];
+    return [NSArray arrayWithArray:array];
+}
+
+-(NSArray*)alphabeticallySortedArray
+{
+    return [self sortedArrayUsingComparator:^(id obj1, id obj2) {
+        return  [obj1 compare:obj2 options:NSCaseInsensitiveSearch];
+    }];
+}
 
 @end

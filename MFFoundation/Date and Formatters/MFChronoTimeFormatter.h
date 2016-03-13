@@ -21,8 +21,11 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+
+@interface MFChronoTimeFormatter : NSObject {
+
+}
 
 @end

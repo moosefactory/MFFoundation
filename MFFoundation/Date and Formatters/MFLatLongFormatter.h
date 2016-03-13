@@ -21,8 +21,26 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "MFFoundation.h"
+#import <Foundation/Foundation.h>
 
-@implementation MFFoundation
+typedef enum {
+    LatLongFormatter_CommaSeparated = 0x00,
+    LatLongFormatter_DMS            = 0x01,
+    LatLongFormatter_ShowDegree     = 0x02,
+    LatLongFormatter_EW             = 0x04,
+    LatLongFormatter_Positive       = 0x08,
+    LatLongFormatter_Parameters     = 0x10
+} latLongFormatterFormat;
+
+@interface MFLatLongFormatter : NSFormatter {
+    latLongFormatterFormat	format;
+    UInt16                  decimals;
+}
+
++(NSString*)degreeToLatitude:(double)degFloat;
++(NSString*)degreeToLongitude:(double)degFloat;
++(NSString*)deg_to_dms:(double)degfloat;
+
+@property(nonatomic,assign) latLongFormatterFormat format;
 
 @end
