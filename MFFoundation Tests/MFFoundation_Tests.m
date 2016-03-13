@@ -66,6 +66,7 @@
     NSLog(@"%@",logStr);
 }
 
+/*
 -(void)testMFSecuriy
 {
     SecCertificateRef myAppleRootCA = AppleRootCA();
@@ -84,6 +85,7 @@
     
     NSLog(@"%@",logStr);
 }
+*/
 
 -(void)testMFMaths
 {

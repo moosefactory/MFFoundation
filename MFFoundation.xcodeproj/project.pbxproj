@@ -23,7 +23,6 @@
 		BC47CBAB1C945056005490DE /* MFPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB921C945056005490DE /* MFPeriod.m */; };
 		BC47CBAC1C945056005490DE /* MFFastTrigo.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB961C945056005490DE /* MFFastTrigo.c */; };
 		BC47CBAD1C945056005490DE /* MFMathUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB981C945056005490DE /* MFMathUtilities.c */; };
-		BC47CBAE1C945056005490DE /* MFSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB9C1C945056005490DE /* MFSecurity.m */; };
 		BC47CBB21C9451AA005490DE /* MFSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CBB11C9451AA005490DE /* MFSystem.m */; };
 		BC47CBEE1C945E5B005490DE /* MFTypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CBED1C945D9C005490DE /* MFTypes.h */; };
 		BC47CC701C948445005490DE /* MFFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,7 +35,6 @@
 		BC47CC771C948458005490DE /* NSString+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB811C945056005490DE /* NSString+MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */; };
 		BC47CC921C948B30005490DE /* libMFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47CB651C944E6E005490DE /* libMFFoundation.a */; };
-		BC47CC981C958011005490DE /* MFSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB9B1C945056005490DE /* MFSecurity.h */; };
 		BC47CC991C95801C005490DE /* MFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CBB01C9451AA005490DE /* MFSystem.h */; };
 /* End PBXBuildFile section */
 
@@ -97,8 +95,6 @@
 		BC47CB971C945056005490DE /* MFFastTrigo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFastTrigo.h; sourceTree = "<group>"; };
 		BC47CB981C945056005490DE /* MFMathUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFMathUtilities.c; sourceTree = "<group>"; };
 		BC47CB991C945056005490DE /* MFMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMathUtilities.h; sourceTree = "<group>"; };
-		BC47CB9B1C945056005490DE /* MFSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSecurity.h; sourceTree = "<group>"; };
-		BC47CB9C1C945056005490DE /* MFSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSecurity.m; sourceTree = "<group>"; };
 		BC47CBB01C9451AA005490DE /* MFSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSystem.h; sourceTree = "<group>"; };
 		BC47CBB11C9451AA005490DE /* MFSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSystem.m; sourceTree = "<group>"; };
 		BC47CBED1C945D9C005490DE /* MFTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFTypes.h; sourceTree = "<group>"; };
@@ -155,7 +151,6 @@
 				BC47CB831C945056005490DE /* Date and Formatters */,
 				BC47CB8C1C945056005490DE /* Types */,
 				BC47CB951C945056005490DE /* Maths */,
-				BC47CB9A1C945056005490DE /* Security */,
 				BC47CBAF1C945179005490DE /* System */,
 			);
 			path = MFFoundation;
@@ -219,15 +214,6 @@
 			path = Maths;
 			sourceTree = "<group>";
 		};
-		BC47CB9A1C945056005490DE /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				BC47CB9B1C945056005490DE /* MFSecurity.h */,
-				BC47CB9C1C945056005490DE /* MFSecurity.m */,
-			);
-			path = Security;
-			sourceTree = "<group>";
-		};
 		BC47CBAF1C945179005490DE /* System */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +247,6 @@
 				BC47CC741C948458005490DE /* NSDate+MFExtras.h in Headers */,
 				BC47CC751C948458005490DE /* NSDictionary+MFExtras.h in Headers */,
 				BC47CC761C948458005490DE /* NSFileManager+MFExtras.h in Headers */,
-				BC47CC981C958011005490DE /* MFSecurity.h in Headers */,
 				BC47CC991C95801C005490DE /* MFSystem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +352,6 @@
 				BC47CBAB1C945056005490DE /* MFPeriod.m in Sources */,
 				BC47CBB21C9451AA005490DE /* MFSystem.m in Sources */,
 				BC47CBA01C945056005490DE /* NSData+MFExtras.m in Sources */,
-				BC47CBAE1C945056005490DE /* MFSecurity.m in Sources */,
 				BC47CBAC1C945056005490DE /* MFFastTrigo.c in Sources */,
 				BC47CB6B1C944E6F005490DE /* MFFoundation.m in Sources */,
 				BC47CBA41C945056005490DE /* NSString+MFExtras.m in Sources */,
