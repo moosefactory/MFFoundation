@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Framework - v3.0                    */
+/*   /\/\/\__/\/\/\        MooseFactory Foundation - v1.0.0                    */
 /*   \/\/\/..\/\/\/                                                         */
 /*        |  |             (c)2007-2016 Tristan Leblanc                     */
 /*        (oo)             tristan@moosefactory.eu                          */
@@ -22,7 +22,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 @interface NSDate (MFExtras)
 
