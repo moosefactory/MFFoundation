@@ -36,6 +36,33 @@
 		BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */; };
 		BC47CC921C948B30005490DE /* libMFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47CB651C944E6E005490DE /* libMFFoundation.a */; };
 		BC47CC991C95801C005490DE /* MFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CBB01C9451AA005490DE /* MFSystem.h */; };
+		BC8E123A1C96F6970044F3B4 /* MFDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB871C945056005490DE /* MFDateUtils.m */; };
+		BC8E123B1C96F6970044F3B4 /* NSDate+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7C1C945056005490DE /* NSDate+MFExtras.m */; };
+		BC8E123C1C96F6970044F3B4 /* MFLatLongFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB8B1C945056005490DE /* MFLatLongFormatter.m */; };
+		BC8E123D1C96F6970044F3B4 /* MFChronoTimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB851C945056005490DE /* MFChronoTimeFormatter.m */; };
+		BC8E123E1C96F6970044F3B4 /* MFMathUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB981C945056005490DE /* MFMathUtilities.c */; };
+		BC8E123F1C96F6970044F3B4 /* MFDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB901C945056005490DE /* MFDateRange.m */; };
+		BC8E12401C96F6970044F3B4 /* NSDictionary+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7E1C945056005490DE /* NSDictionary+MFExtras.m */; };
+		BC8E12411C96F6970044F3B4 /* NSFileManager+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB801C945056005490DE /* NSFileManager+MFExtras.m */; };
+		BC8E12421C96F6970044F3B4 /* NSArray+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB781C945056005490DE /* NSArray+MFExtras.m */; };
+		BC8E12431C96F6970044F3B4 /* MFPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB921C945056005490DE /* MFPeriod.m */; };
+		BC8E12441C96F6970044F3B4 /* MFSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CBB11C9451AA005490DE /* MFSystem.m */; };
+		BC8E12451C96F6970044F3B4 /* NSData+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7A1C945056005490DE /* NSData+MFExtras.m */; };
+		BC8E12461C96F6970044F3B4 /* MFFastTrigo.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB961C945056005490DE /* MFFastTrigo.c */; };
+		BC8E12471C96F6970044F3B4 /* MFFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB6A1C944E6F005490DE /* MFFoundation.m */; };
+		BC8E12481C96F6970044F3B4 /* NSString+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB821C945056005490DE /* NSString+MFExtras.m */; };
+		BC8E12491C96F6970044F3B4 /* MFFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB891C945056005490DE /* MFFormatters.m */; };
+		BC8E124C1C96F6970044F3B4 /* MFTypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CBED1C945D9C005490DE /* MFTypes.h */; };
+		BC8E124D1C96F6970044F3B4 /* MFFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; };
+		BC8E124F1C96F6970044F3B4 /* MFFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC8E12501C96F6970044F3B4 /* NSString+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB811C945056005490DE /* NSString+MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC8E12511C96F6970044F3B4 /* MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB761C945056005490DE /* MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC8E12521C96F6970044F3B4 /* NSArray+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB771C945056005490DE /* NSArray+MFExtras.h */; };
+		BC8E12531C96F6970044F3B4 /* NSData+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB791C945056005490DE /* NSData+MFExtras.h */; };
+		BC8E12541C96F6970044F3B4 /* NSDate+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7B1C945056005490DE /* NSDate+MFExtras.h */; };
+		BC8E12551C96F6970044F3B4 /* NSDictionary+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7D1C945056005490DE /* NSDictionary+MFExtras.h */; };
+		BC8E12561C96F6970044F3B4 /* NSFileManager+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7F1C945056005490DE /* NSFileManager+MFExtras.h */; };
+		BC8E12571C96F6970044F3B4 /* MFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CBB01C9451AA005490DE /* MFSystem.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +84,17 @@
 			files = (
 				BC47CBEE1C945E5B005490DE /* MFTypes.h in CopyFiles */,
 				BC47CB691C944E6F005490DE /* MFFoundation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC8E124B1C96F6970044F3B4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				BC8E124C1C96F6970044F3B4 /* MFTypes.h in CopyFiles */,
+				BC8E124D1C96F6970044F3B4 /* MFFoundation.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +139,9 @@
 		BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MFFoundation Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFoundation_Tests.m; sourceTree = "<group>"; };
 		BC47CC911C948B30005490DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC8E11EB1C96D2290044F3B4 /* appledoc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = appledoc.sh; sourceTree = "<group>"; };
+		BC8E11EC1C96D2290044F3B4 /* CONTRIBUTE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTE.md; sourceTree = "<group>"; };
+		BC8E125C1C96F6970044F3B4 /* libMFFoundation + AppleDocs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMFFoundation + AppleDocs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF768C41C95F6E600DED52C /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		BCF768C51C961CC800DED52C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BCF768C61C961CC800DED52C /* MFFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MFFoundation.podspec; sourceTree = "<group>"; };
@@ -122,6 +163,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC8E124A1C96F6970044F3B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,6 +179,8 @@
 				BCF768C51C961CC800DED52C /* LICENSE */,
 				BCF768C61C961CC800DED52C /* MFFoundation.podspec */,
 				BCF768C41C95F6E600DED52C /* readme.md */,
+				BC8E11EC1C96D2290044F3B4 /* CONTRIBUTE.md */,
+				BC8E11EB1C96D2290044F3B4 /* appledoc.sh */,
 				BC47CB671C944E6E005490DE /* MFFoundation */,
 				BC47CC8E1C948B30005490DE /* MFFoundation Tests */,
 				BC47CB661C944E6E005490DE /* Products */,
@@ -142,6 +192,7 @@
 			children = (
 				BC47CB651C944E6E005490DE /* libMFFoundation.a */,
 				BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */,
+				BC8E125C1C96F6970044F3B4 /* libMFFoundation + AppleDocs.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +306,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC8E124E1C96F6970044F3B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8E124F1C96F6970044F3B4 /* MFFoundation.h in Headers */,
+				BC8E12501C96F6970044F3B4 /* NSString+MFExtras.h in Headers */,
+				BC8E12511C96F6970044F3B4 /* MFExtras.h in Headers */,
+				BC8E12521C96F6970044F3B4 /* NSArray+MFExtras.h in Headers */,
+				BC8E12531C96F6970044F3B4 /* NSData+MFExtras.h in Headers */,
+				BC8E12541C96F6970044F3B4 /* NSDate+MFExtras.h in Headers */,
+				BC8E12551C96F6970044F3B4 /* NSDictionary+MFExtras.h in Headers */,
+				BC8E12561C96F6970044F3B4 /* NSFileManager+MFExtras.h in Headers */,
+				BC8E12571C96F6970044F3B4 /* MFSystem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -294,6 +361,25 @@
 			productReference = BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BC8E12381C96F6970044F3B4 /* MFFoundation + AppleDocs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC8E12591C96F6970044F3B4 /* Build configuration list for PBXNativeTarget "MFFoundation + AppleDocs" */;
+			buildPhases = (
+				BC8E12391C96F6970044F3B4 /* Sources */,
+				BC8E124A1C96F6970044F3B4 /* Frameworks */,
+				BC8E124B1C96F6970044F3B4 /* CopyFiles */,
+				BC8E124E1C96F6970044F3B4 /* Headers */,
+				BC8E12581C96F6970044F3B4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MFFoundation + AppleDocs";
+			productName = MFFoundation;
+			productReference = BC8E125C1C96F6970044F3B4 /* libMFFoundation + AppleDocs.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -325,6 +411,7 @@
 			targets = (
 				BC47CB641C944E6E005490DE /* MFFoundation */,
 				BC47CC8C1C948B2F005490DE /* MFFoundation Tests */,
+				BC8E12381C96F6970044F3B4 /* MFFoundation + AppleDocs */,
 			);
 		};
 /* End PBXProject section */
@@ -338,6 +425,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC8E12581C96F6970044F3B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./appledoc.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC47CB611C944E6E005490DE /* Sources */ = {
@@ -368,6 +471,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC8E12391C96F6970044F3B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8E123A1C96F6970044F3B4 /* MFDateUtils.m in Sources */,
+				BC8E123B1C96F6970044F3B4 /* NSDate+MFExtras.m in Sources */,
+				BC8E123C1C96F6970044F3B4 /* MFLatLongFormatter.m in Sources */,
+				BC8E123D1C96F6970044F3B4 /* MFChronoTimeFormatter.m in Sources */,
+				BC8E123E1C96F6970044F3B4 /* MFMathUtilities.c in Sources */,
+				BC8E123F1C96F6970044F3B4 /* MFDateRange.m in Sources */,
+				BC8E12401C96F6970044F3B4 /* NSDictionary+MFExtras.m in Sources */,
+				BC8E12411C96F6970044F3B4 /* NSFileManager+MFExtras.m in Sources */,
+				BC8E12421C96F6970044F3B4 /* NSArray+MFExtras.m in Sources */,
+				BC8E12431C96F6970044F3B4 /* MFPeriod.m in Sources */,
+				BC8E12441C96F6970044F3B4 /* MFSystem.m in Sources */,
+				BC8E12451C96F6970044F3B4 /* NSData+MFExtras.m in Sources */,
+				BC8E12461C96F6970044F3B4 /* MFFastTrigo.c in Sources */,
+				BC8E12471C96F6970044F3B4 /* MFFoundation.m in Sources */,
+				BC8E12481C96F6970044F3B4 /* NSString+MFExtras.m in Sources */,
+				BC8E12491C96F6970044F3B4 /* MFFormatters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +649,30 @@
 			};
 			name = Release;
 		};
+		BC8E125A1C96F6970044F3B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		BC8E125B1C96F6970044F3B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,6 +699,15 @@
 			buildConfigurations = (
 				BC47CC961C948B30005490DE /* Debug */,
 				BC47CC971C948B30005490DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC8E12591C96F6970044F3B4 /* Build configuration list for PBXNativeTarget "MFFoundation + AppleDocs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC8E125A1C96F6970044F3B4 /* Debug */,
+				BC8E125B1C96F6970044F3B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

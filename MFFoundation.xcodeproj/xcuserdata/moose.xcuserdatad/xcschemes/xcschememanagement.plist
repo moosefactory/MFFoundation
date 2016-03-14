@@ -7,12 +7,17 @@
 		<key>MFFoundation Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<key>MFFoundation copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>MFFoundation.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>BC47CC8C1C948B2F005490DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC8E12381C96F6970044F3B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
