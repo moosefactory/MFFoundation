@@ -30,6 +30,7 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
+
 /** MFDateUtils is a static utility class
 
  It defines some constants and static functions.
@@ -46,7 +47,7 @@ THE SOFTWARE.
      } MFDaysSelectorFlag;
  */
 
-typedef enum {
+typedef NS_OPTIONS(NSUInteger, MFDaySelectorFlag) {
     MFDaysSelector_Monday       = 1,
     MFDaysSelector_Tuesday      = 2,
     MFDaysSelector_Wedenesday   = 4,
@@ -54,7 +55,7 @@ typedef enum {
     MFDaysSelector_Friday       = 16,
     MFDaysSelector_Saturday     = 32,
     MFDaysSelector_Sunday       = 64
-} MFDaysSelectorFlag;
+};
 
 typedef NSUInteger MFDaysSelectorMask;
 

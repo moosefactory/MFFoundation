@@ -28,33 +28,74 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
+/**
+@header Fast Trigo computation.
+*/
+
 #ifndef MFFastTrigo_MFFastTrigo_h
 #define MFFastTrigo_MFFastTrigo_h
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
+
+    /*
 #ifdef __c
     extern {
 #endif
+  */
+
+        
+        
+/*!
+Use buildMFFastTrigoTables before calling any MFFastTrigo function.
+Calling this function allocates static tables with pre-computed trigo function return values.
+ */
         
 void buildMFFastTrigoTables();
+
+/*!
+ Flush the memory allocated to store tables
+ */
+
 void tearDownMFFastTrigo();
         
+/*!
+ Return the sinus of a given angle ( integer value, in degrees )
+ */
+        
 double mffsind(long angle);
+
+/*!
+ Return the cosinus of a given angle ( integer value, in degrees )
+ */
 double mffcosd(long angle);
+
+/*!
+ Return the tangent of a given angle ( integer value, in degrees )
+ */
+
 double mfftand(long angle);
 
+
+/*!
+ Return the sinus, mapped to interval [0.0…1.0f], of a given angle ( integer value, in degrees )
+ */
 double mffpsind(long angle);
+
+/*!
+ Return the cosinus, mapped to interval [0.0…1.0f], of a given angle ( integer value, in degrees )
+ */
 double mffpcosd(long angle);
         
 #ifdef __cplusplus
 }
 #endif
-        
+
+/*
 #ifdef __c
 }
 #endif
+*/
 
 #endif

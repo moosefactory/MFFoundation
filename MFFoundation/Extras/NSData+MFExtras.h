@@ -30,6 +30,22 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
+
+/*!
+ @discussion This category add convenience methods to the NSData class.
+ 
+ ## Version information
+ 
+ __Version__: 1.0
+ 
+ __Last update__: 2016/03/19
+ 
+ __Developer__:  Tristan Leblanc - MooseFactory Software.
+ 
+ ## Methods
+ 
+ */
+
 @interface NSData (MFExtras)
 
 

@@ -28,6 +28,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
+
+/*!
+ @discussion This category add convenience methods to the NSDate class.
+ 
+ ## Version information
+ 
+ __Version__: 1.0
+ 
+ __Last update__: 2016/03/19
+ 
+ __Developer__:  Tristan Leblanc - MooseFactory Software.
+ 
+ ## Methods
+ 
+ */
+
 #import <Foundation/Foundation.h>
 
 /** Defines a set of convenient methods, often used in time / calendar based applications.

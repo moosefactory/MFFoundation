@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>MFFoundation copy 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>MFFoundation copy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -19,9 +24,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MFFoundationDoc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BC201ED91C9D6305001DE14C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC201EDD1C9D6628001DE14C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BC47CB641C944E6E005490DE</key>
 		<dict>
 			<key>primary</key>

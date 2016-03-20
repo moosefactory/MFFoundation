@@ -93,11 +93,9 @@
     
     logStr = [logStr stringByAppendingString:@"\rMaths :"];
     
-    extern  const float kPiOnThree;
-    extern  const float kTwoPiOnThree;
     
-    logStr = [logStr stringByAppendingFormat:@"\rkPiOnThree = %f",kPiOnThree];
-    logStr = [logStr stringByAppendingFormat:@"\rkTwoPiOnThree = %f",kTwoPiOnThree];
+    logStr = [logStr stringByAppendingFormat:@"\rkPiOnThree = %f",MF_PiOnThree];
+    logStr = [logStr stringByAppendingFormat:@"\rkTwoPiOnThree = %f",MF_TwoPiOnThree];
     
     logStr = [logStr stringByAppendingFormat:@"\r\rMF_clampOne(0.6f) = %f",MF_clampOne(0.6f)];
     logStr = [logStr stringByAppendingFormat:@"\rMF_clampOne(1.8f) = %f",MF_clampOne(1.8f)];
@@ -117,15 +115,15 @@
     logStr = [logStr stringByAppendingFormat:@"\rMF_modf(-3.5f,-2.9f) = %f",MF_modf(-3.5f,-2.9f)];
     logStr = [logStr stringByAppendingFormat:@"\rMF_modf(-3.5f,-4.0f) = %f",MF_modf(-3.5f,-4.0f)];
     
-    logStr = [logStr stringByAppendingFormat:@"\r\rmfpsin(0.0f) = %f",mfpsin(0.0f)];
-    logStr = [logStr stringByAppendingFormat:@"\rmfpsin(M_PI / 2) = %f",mfpsin(M_PI / 2)];
-    logStr = [logStr stringByAppendingFormat:@"\rmfpsin(M_PI) = %f",mfpsin(M_PI)];
-    logStr = [logStr stringByAppendingFormat:@"\rmfpsin(M_PI*1.5) = %f",mfpsin(M_PI*1.5)];
+    logStr = [logStr stringByAppendingFormat:@"\r\rmfpsin(0.0f) = %f",MF_psin(0.0f)];
+    logStr = [logStr stringByAppendingFormat:@"\rmfpsin(M_PI / 2) = %f",MF_psin(M_PI / 2)];
+    logStr = [logStr stringByAppendingFormat:@"\rmfpsin(M_PI) = %f",MF_psin(M_PI)];
+    logStr = [logStr stringByAppendingFormat:@"\rmfpsin(M_PI*1.5) = %f",MF_psin(M_PI*1.5)];
     
-    logStr = [logStr stringByAppendingFormat:@"\r\rmfpcos(0.0f) = %f",mfpcos(0.0f)];
-    logStr = [logStr stringByAppendingFormat:@"\rmfpcos(M_PI / 2) = %f",mfpcos(M_PI / 2)];
-    logStr = [logStr stringByAppendingFormat:@"\rmfpcos(M_PI) = %f",mfpcos(M_PI)];
-    logStr = [logStr stringByAppendingFormat:@"\rmfpcos(M_PI*1.5) = %f",mfpcos(M_PI*1.5)];
+    logStr = [logStr stringByAppendingFormat:@"\r\rmfpcos(0.0f) = %f",MF_pcos(0.0f)];
+    logStr = [logStr stringByAppendingFormat:@"\rmfpcos(M_PI / 2) = %f",MF_pcos(M_PI / 2)];
+    logStr = [logStr stringByAppendingFormat:@"\rmfpcos(M_PI) = %f",MF_pcos(M_PI)];
+    logStr = [logStr stringByAppendingFormat:@"\rmfpcos(M_PI*1.5) = %f",MF_pcos(M_PI*1.5)];
     
     logStr = [logStr stringByAppendingFormat:@"\r\rMF_maxf(-3.5f,-1.4f) = %f",MF_maxf(3.5f,1.4f)];
     logStr = [logStr stringByAppendingFormat:@"\rMF_maxf(-3.5f,-2.9f) = %f",MF_maxf(3.5f,-2.9f)];

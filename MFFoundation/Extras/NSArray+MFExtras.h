@@ -30,6 +30,21 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
+/*!
+ @discussion This category add convenience methods to the NSArray class.
+ 
+ ## Version information
+ 
+ __Version__: 1.0
+ 
+ __Last update__: 2016/03/19
+ 
+ __Developer__:  Tristan Leblanc - MooseFactory Software.
+ 
+ ## Methods
+ 
+ */
+
 @interface NSArray (MFExtras)
 
 /** Returns a copy of the array without the last object

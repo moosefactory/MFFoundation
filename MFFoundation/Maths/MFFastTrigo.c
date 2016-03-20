@@ -84,27 +84,42 @@ extern void tearDownMFFastTrigo()
 
 extern double mffsind(long angle)
 {
-    return sinTable[angle%kMFFastTrigoTableSize];
+    if (angle>0)
+        return sinTable[angle%kMFFastTrigoTableSize];
+    else
+        return sinTable[-angle%kMFFastTrigoTableSize];
 }
 
 extern double mffcosd(long angle)
 {
-    return cosTable[angle%kMFFastTrigoTableSize];
+    if (angle>0)
+        return cosTable[angle%kMFFastTrigoTableSize];
+    else
+        return cosTable[-angle%kMFFastTrigoTableSize];
 }
 
 extern double mfftand(long angle)
 {
-    return tanTable[angle%kMFFastTrigoTableSize];
+    if (angle>0)
+        return tanTable[angle%kMFFastTrigoTableSize];
+    else
+        return tanTable[-angle%kMFFastTrigoTableSize];
 }
 
 extern double mffpsind(long angle)
 {
-    return psinTable[angle%kMFFastTrigoTableSize];
+    if (angle>0)
+        return psinTable[angle%kMFFastTrigoTableSize];
+    else
+        return psinTable[-angle%kMFFastTrigoTableSize];
 }
 
 extern double mffpcosd(long angle)
 {
-    return pcosTable[angle%kMFFastTrigoTableSize];
+    if (angle>0)
+        return pcosTable[angle%kMFFastTrigoTableSize];
+    else
+        return pcosTable[-angle%kMFFastTrigoTableSize];
 }
 
 

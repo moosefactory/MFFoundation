@@ -30,14 +30,16 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_OPTIONS(NSUInteger,latLongFormatterFormat) {
+    /** Should values be separated by commas
+     */ 
     LatLongFormatter_CommaSeparated = 0x00,
     LatLongFormatter_DMS            = 0x01,
     LatLongFormatter_ShowDegree     = 0x02,
     LatLongFormatter_EW             = 0x04,
     LatLongFormatter_Positive       = 0x08,
     LatLongFormatter_Parameters     = 0x10
-} latLongFormatterFormat;
+};
 
 @interface MFLatLongFormatter : NSFormatter {
     latLongFormatterFormat	format;

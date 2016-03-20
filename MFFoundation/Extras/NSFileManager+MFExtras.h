@@ -30,10 +30,28 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
+
+/*!
+ @discussion This category add convenience methods to the NSFileManager class.
+ 
+ ## Version information
+ 
+ __Version__: 1.0
+ 
+ __Last update__: 2016/03/19
+ 
+ __Developer__:  Tristan Leblanc - MooseFactory Software.
+ 
+ ## Methods
+ 
+ */
+
 @interface NSFileManager (MFExtras)
 
 /** Returns true if a given directory is empty. 
  If it only contains invisible files, it returns false, but sets the boolean 'containsOnlyInvisibleFiles' to true.
+ @param path The path of the item to test
+ @param containsOnlyInvisibleFiles  Set to YES on output if the folder only contains invisible files
  */
 
 -(BOOL)isDirectoryEmpty:(NSString*)path containsOnlyInvisibleFiles:(BOOL*)containsOnlyInvisibleFiles;

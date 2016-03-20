@@ -9,24 +9,29 @@
 #appledoc Xcode script
 # Start constants
 company="MooseFactory Software";
+companyEscaped="MooseFactorySoftware";
+docFolder="Frameworks/Doc";
 companyID="com.moosefactory";
 companyURL="http://www.moosefactory.eu";
+product="MFFoundation"
 target="iphoneos";
 #target="macosx";
 
-outputPath="~/help";
+outputPath="~/help/${company}/${product}";
 # End constants
 /usr/local/bin/appledoc \
 --project-name "${PROJECT_NAME}" \
 --project-company "${company}" \
 --company-id "${companyID}" \
---docset-atom-filename "${company}.atom" \
---docset-feed-url "${companyURL}/${company}/%DOCSETATOMFILENAME" \
---docset-package-url "${companyURL}/${company}/%DOCSETPACKAGEFILENAME" \
---docset-fallback-url "${companyURL}/${company}" \
+--docset-atom-filename "${product}.atom" \
+--docset-feed-url "${companyURL}/${docFolder}/%DOCSETATOMFILENAME" \
+--docset-package-url "${companyURL}/${docFolder}/%DOCSETPACKAGEFILENAME" \
+--docset-fallback-url "${companyURL}/${docFolder}/" \
 --output "${outputPath}" \
+--index-desc .readme-appledoc.md \
 --publish-docset \
 --docset-platform-family "${target}" \
+--include ./HeaderDocs/ \
 --logformat xcode \
 --keep-intermediate-files \
 --no-repeat-first-par \
@@ -35,7 +40,6 @@ outputPath="~/help";
 --keep-undocumented-objects \
 --keep-undocumented-members \
 --logformat xcode \
---merge-categories \
 --no-repeat-first-par \
 --no-warn-invalid-crossref \
 --no-warn-undocumented-object \
@@ -90,3 +94,5 @@ outputPath="~/help";
 --ignore "PonyDebuggerLogger" \
 --ignore "SocketRocket" \
 "${PROJECT_DIR}"
+
+#--merge-categories \
