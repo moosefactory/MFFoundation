@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC068ADB1C9E9D8800940720 /* MFCGCombinedColor.c in Sources */ = {isa = PBXBuildFile; fileRef = BC068AD91C9E9D8800940720 /* MFCGCombinedColor.c */; };
+		BC068ADC1C9E9D8800940720 /* MFCGCombinedColor.c in Sources */ = {isa = PBXBuildFile; fileRef = BC068AD91C9E9D8800940720 /* MFCGCombinedColor.c */; };
+		BC068ADD1C9E9D8800940720 /* MFCGCombinedColor.h in Headers */ = {isa = PBXBuildFile; fileRef = BC068ADA1C9E9D8800940720 /* MFCGCombinedColor.h */; };
+		BC068AE01C9EB1FA00940720 /* MFDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB871C945056005490DE /* MFDateUtils.m */; };
+		BC068AE11C9EB1FA00940720 /* NSDate+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7C1C945056005490DE /* NSDate+MFExtras.m */; };
+		BC068AE21C9EB1FA00940720 /* MFLatLongFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB8B1C945056005490DE /* MFLatLongFormatter.m */; };
+		BC068AE31C9EB1FA00940720 /* MFChronoTimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB851C945056005490DE /* MFChronoTimeFormatter.m */; };
+		BC068AE41C9EB1FA00940720 /* MFMathUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB981C945056005490DE /* MFMathUtilities.c */; };
+		BC068AE51C9EB1FA00940720 /* MFDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB901C945056005490DE /* MFDateRange.m */; };
+		BC068AE61C9EB1FA00940720 /* NSDictionary+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7E1C945056005490DE /* NSDictionary+MFExtras.m */; };
+		BC068AE71C9EB1FA00940720 /* NSFileManager+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB801C945056005490DE /* NSFileManager+MFExtras.m */; };
+		BC068AE81C9EB1FA00940720 /* NSArray+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB781C945056005490DE /* NSArray+MFExtras.m */; };
+		BC068AE91C9EB1FA00940720 /* MFPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB921C945056005490DE /* MFPeriod.m */; };
+		BC068AEA1C9EB1FA00940720 /* MFSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CBB11C9451AA005490DE /* MFSystem.m */; };
+		BC068AEB1C9EB1FA00940720 /* NSData+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB7A1C945056005490DE /* NSData+MFExtras.m */; };
+		BC068AEC1C9EB1FA00940720 /* MFFastTrigo.c in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB961C945056005490DE /* MFFastTrigo.c */; };
+		BC068AED1C9EB1FA00940720 /* MFFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB6A1C944E6F005490DE /* MFFoundation.m */; };
+		BC068AEE1C9EB1FA00940720 /* NSString+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB821C945056005490DE /* NSString+MFExtras.m */; };
+		BC068AEF1C9EB1FA00940720 /* MFFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB891C945056005490DE /* MFFormatters.m */; };
+		BC068AF01C9EB1FA00940720 /* MFCGCombinedColor.c in Sources */ = {isa = PBXBuildFile; fileRef = BC068AD91C9E9D8800940720 /* MFCGCombinedColor.c */; };
+		BC068AF31C9EB1FA00940720 /* MFTypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CBED1C945D9C005490DE /* MFTypes.h */; };
+		BC068AF41C9EB1FA00940720 /* MFFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; };
+		BC068AF61C9EB1FA00940720 /* MFFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC068AF71C9EB1FA00940720 /* NSString+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB811C945056005490DE /* NSString+MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC068AF81C9EB1FA00940720 /* MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB761C945056005490DE /* MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC068AF91C9EB1FA00940720 /* NSArray+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB771C945056005490DE /* NSArray+MFExtras.h */; };
+		BC068AFA1C9EB1FA00940720 /* NSData+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB791C945056005490DE /* NSData+MFExtras.h */; };
+		BC068AFB1C9EB1FA00940720 /* NSDate+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7B1C945056005490DE /* NSDate+MFExtras.h */; };
+		BC068AFC1C9EB1FA00940720 /* MFCGCombinedColor.h in Headers */ = {isa = PBXBuildFile; fileRef = BC068ADA1C9E9D8800940720 /* MFCGCombinedColor.h */; };
+		BC068AFD1C9EB1FA00940720 /* NSDictionary+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7D1C945056005490DE /* NSDictionary+MFExtras.h */; };
+		BC068AFE1C9EB1FA00940720 /* NSFileManager+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7F1C945056005490DE /* NSFileManager+MFExtras.h */; };
+		BC068AFF1C9EB1FA00940720 /* MFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CBB01C9451AA005490DE /* MFSystem.h */; };
 		BC47CB691C944E6F005490DE /* MFFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC47CB681C944E6F005490DE /* MFFoundation.h */; };
 		BC47CB6B1C944E6F005490DE /* MFFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB6A1C944E6F005490DE /* MFFoundation.m */; };
 		BC47CB9F1C945056005490DE /* NSArray+MFExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CB781C945056005490DE /* NSArray+MFExtras.m */; };
@@ -49,6 +81,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BC068AF21C9EB1FA00940720 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				BC068AF31C9EB1FA00940720 /* MFTypes.h in CopyFiles */,
+				BC068AF41C9EB1FA00940720 /* MFFoundation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC47CB631C944E6E005490DE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +106,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC068AD91C9E9D8800940720 /* MFCGCombinedColor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MFCGCombinedColor.c; sourceTree = "<group>"; };
+		BC068ADA1C9E9D8800940720 /* MFCGCombinedColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCGCombinedColor.h; sourceTree = "<group>"; };
+		BC068B031C9EB1FA00940720 /* libMFFoundation-MacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMFFoundation-MacOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC201F011C9D713A001DE14C /* readme-appledoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "readme-appledoc.md"; sourceTree = "<group>"; };
 		BC201F021C9D89A4001DE14C /* headerdoc-make.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "headerdoc-make.sh"; sourceTree = "<group>"; };
 		BC47CB651C944E6E005490DE /* libMFFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMFFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +157,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BC068AF11C9EB1FA00940720 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC47CB621C944E6E005490DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC068AD81C9E9D8800940720 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				BC068AD91C9E9D8800940720 /* MFCGCombinedColor.c */,
+				BC068ADA1C9E9D8800940720 /* MFCGCombinedColor.h */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
 		BC47CB5C1C944E6D005490DE = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +212,7 @@
 			children = (
 				BC47CB651C944E6E005490DE /* libMFFoundation.a */,
 				BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */,
+				BC068B031C9EB1FA00940720 /* libMFFoundation-MacOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +224,7 @@
 				BC47CB6A1C944E6F005490DE /* MFFoundation.m */,
 				BC47CB711C945056005490DE /* Extras */,
 				BC47CB831C945056005490DE /* Date and Formatters */,
+				BC068AD81C9E9D8800940720 /* Graphics */,
 				BC47CB8C1C945056005490DE /* Types */,
 				BC47CB951C945056005490DE /* Maths */,
 				BC47CBAF1C945179005490DE /* System */,
@@ -247,6 +311,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		BC068AF51C9EB1FA00940720 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC068AF61C9EB1FA00940720 /* MFFoundation.h in Headers */,
+				BC068AF71C9EB1FA00940720 /* NSString+MFExtras.h in Headers */,
+				BC068AF81C9EB1FA00940720 /* MFExtras.h in Headers */,
+				BC068AF91C9EB1FA00940720 /* NSArray+MFExtras.h in Headers */,
+				BC068AFA1C9EB1FA00940720 /* NSData+MFExtras.h in Headers */,
+				BC068AFB1C9EB1FA00940720 /* NSDate+MFExtras.h in Headers */,
+				BC068AFC1C9EB1FA00940720 /* MFCGCombinedColor.h in Headers */,
+				BC068AFD1C9EB1FA00940720 /* NSDictionary+MFExtras.h in Headers */,
+				BC068AFE1C9EB1FA00940720 /* NSFileManager+MFExtras.h in Headers */,
+				BC068AFF1C9EB1FA00940720 /* MFSystem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC47CC6F1C948440005490DE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +338,7 @@
 				BC47CC721C948458005490DE /* NSArray+MFExtras.h in Headers */,
 				BC47CC731C948458005490DE /* NSData+MFExtras.h in Headers */,
 				BC47CC741C948458005490DE /* NSDate+MFExtras.h in Headers */,
+				BC068ADD1C9E9D8800940720 /* MFCGCombinedColor.h in Headers */,
 				BC47CC751C948458005490DE /* NSDictionary+MFExtras.h in Headers */,
 				BC47CC761C948458005490DE /* NSFileManager+MFExtras.h in Headers */,
 				BC47CC991C95801C005490DE /* MFSystem.h in Headers */,
@@ -283,6 +365,24 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		BC068ADE1C9EB1FA00940720 /* MFFoundation-MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC068B001C9EB1FA00940720 /* Build configuration list for PBXNativeTarget "MFFoundation-MacOS" */;
+			buildPhases = (
+				BC068ADF1C9EB1FA00940720 /* Sources */,
+				BC068AF11C9EB1FA00940720 /* Frameworks */,
+				BC068AF21C9EB1FA00940720 /* CopyFiles */,
+				BC068AF51C9EB1FA00940720 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MFFoundation-MacOS";
+			productName = MFFoundation;
+			productReference = BC068B031C9EB1FA00940720 /* libMFFoundation-MacOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		BC47CB641C944E6E005490DE /* MFFoundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC47CB6E1C944E6F005490DE /* Build configuration list for PBXNativeTarget "MFFoundation" */;
@@ -354,6 +454,7 @@
 				BC47CB641C944E6E005490DE /* MFFoundation */,
 				BC47CC8C1C948B2F005490DE /* MFFoundation Tests */,
 				BC201ED91C9D6305001DE14C /* MFFoundationDoc */,
+				BC068ADE1C9EB1FA00940720 /* MFFoundation-MacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -369,6 +470,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BC068ADF1C9EB1FA00940720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC068AE01C9EB1FA00940720 /* MFDateUtils.m in Sources */,
+				BC068AE11C9EB1FA00940720 /* NSDate+MFExtras.m in Sources */,
+				BC068AE21C9EB1FA00940720 /* MFLatLongFormatter.m in Sources */,
+				BC068AE31C9EB1FA00940720 /* MFChronoTimeFormatter.m in Sources */,
+				BC068AE41C9EB1FA00940720 /* MFMathUtilities.c in Sources */,
+				BC068AE51C9EB1FA00940720 /* MFDateRange.m in Sources */,
+				BC068AE61C9EB1FA00940720 /* NSDictionary+MFExtras.m in Sources */,
+				BC068AE71C9EB1FA00940720 /* NSFileManager+MFExtras.m in Sources */,
+				BC068AE81C9EB1FA00940720 /* NSArray+MFExtras.m in Sources */,
+				BC068AE91C9EB1FA00940720 /* MFPeriod.m in Sources */,
+				BC068AEA1C9EB1FA00940720 /* MFSystem.m in Sources */,
+				BC068AEB1C9EB1FA00940720 /* NSData+MFExtras.m in Sources */,
+				BC068AEC1C9EB1FA00940720 /* MFFastTrigo.c in Sources */,
+				BC068AED1C9EB1FA00940720 /* MFFoundation.m in Sources */,
+				BC068AEE1C9EB1FA00940720 /* NSString+MFExtras.m in Sources */,
+				BC068AEF1C9EB1FA00940720 /* MFFormatters.m in Sources */,
+				BC068AF01C9EB1FA00940720 /* MFCGCombinedColor.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC47CB611C944E6E005490DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +514,7 @@
 				BC47CB6B1C944E6F005490DE /* MFFoundation.m in Sources */,
 				BC47CBA41C945056005490DE /* NSString+MFExtras.m in Sources */,
 				BC47CBA71C945056005490DE /* MFFormatters.m in Sources */,
+				BC068ADB1C9E9D8800940720 /* MFCGCombinedColor.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */,
+				BC068ADC1C9E9D8800940720 /* MFCGCombinedColor.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +538,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BC068B011C9EB1FA00940720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		BC068B021C9EB1FA00940720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
 		BC201EDA1C9D6305001DE14C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -582,6 +741,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BC068B001C9EB1FA00940720 /* Build configuration list for PBXNativeTarget "MFFoundation-MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC068B011C9EB1FA00940720 /* Debug */,
+				BC068B021C9EB1FA00940720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BC201EDC1C9D6305001DE14C /* Build configuration list for PBXLegacyTarget "MFFoundationDoc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

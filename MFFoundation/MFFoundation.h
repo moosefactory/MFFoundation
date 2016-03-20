@@ -30,20 +30,38 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
+#pragma mark - C Types
 
 #import "MFTypes.h"
-#import "MFSystem.h"
+
+#pragma mark - Extras
+
 #import "MFExtras.h"
 
+#pragma mark - Maths
+
 #import "MFMathUtilities.h"
+#import "MFFastTrigo.h"
+
+#pragma mark - Graphics
+
+#import "MFCGCombinedColor.h"
+
+#pragma mark - Date and Formatters
 
 #import "MFDateUtils.h"
 #import "MFFormatters.h"
 #import "MFChronoTimeFormatter.h"
 #import "MFLatLongFormatter.h"
 
+#pragma mark - Types Classes
+
 #import "MFDateRange.h"
 #import "MFPeriod.h"
+
+#pragma mark - System
+
+#import "MFSystem.h"
 
 
 @interface MFFoundation : NSObject

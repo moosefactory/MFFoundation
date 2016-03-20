@@ -36,22 +36,22 @@ THE SOFTWARE.
 
 #pragma mark - MF_clampOne
 
-extern inline double MF_clampOne(double f) {
-    if (f>=1.0f) return 1.0f;
-    if (f<=0.0f) return 0.0f;
-    return f;
+extern inline double MF_clampOne(double value) {
+    if (value>=1.0f) return 1.0f;
+    if (value<=0.0f) return 0.0f;
+    return value;
 }
 
-extern inline float MF_clampOnef(float f) {
-    if (f>=1.0f) return 1.0f;
-    if (f<=0.0f) return 0.0f;
-    return f;
+extern inline float MF_clampOnef(float value) {
+    if (value>=1.0f) return 1.0f;
+    if (value<=0.0f) return 0.0f;
+    return value;
 }
 
-extern inline long double MF_clampOnel(long double f) {
-    if (f>=1.0f) return 1.0f;
-    if (f<=0.0f) return 0.0f;
-    return f;
+extern inline long double MF_clampOnel(long double value) {
+    if (value>=1.0f) return 1.0f;
+    if (value<=0.0f) return 0.0f;
+    return value;
 }
 
 
