@@ -73,6 +73,10 @@ Work is in progress. This disclaimer should disapear quite soon ;)
 * MFFormatters
 * MFLatLongFormatter
 
+**Graphics**
+
+* MFCombinedColor
+
 ***
 
 **Types**

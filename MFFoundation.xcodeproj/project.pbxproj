@@ -66,7 +66,7 @@
 		BC47CC761C948458005490DE /* NSFileManager+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB7F1C945056005490DE /* NSFileManager+MFExtras.h */; };
 		BC47CC771C948458005490DE /* NSString+MFExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CB811C945056005490DE /* NSString+MFExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC47CC901C948B30005490DE /* MFFoundation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC47CC8F1C948B30005490DE /* MFFoundation_Tests.m */; };
-		BC47CC921C948B30005490DE /* libMFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47CB651C944E6E005490DE /* libMFFoundation.a */; };
+		BC47CC921C948B30005490DE /* libMFFoundation-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC47CB651C944E6E005490DE /* libMFFoundation-iOS.a */; };
 		BC47CC991C95801C005490DE /* MFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC47CBB01C9451AA005490DE /* MFSystem.h */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +111,7 @@
 		BC068B031C9EB1FA00940720 /* libMFFoundation-MacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMFFoundation-MacOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC201F011C9D713A001DE14C /* readme-appledoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "readme-appledoc.md"; sourceTree = "<group>"; };
 		BC201F021C9D89A4001DE14C /* headerdoc-make.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "headerdoc-make.sh"; sourceTree = "<group>"; };
-		BC47CB651C944E6E005490DE /* libMFFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMFFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC47CB651C944E6E005490DE /* libMFFoundation-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMFFoundation-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC47CB681C944E6F005490DE /* MFFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFFoundation.h; sourceTree = "<group>"; };
 		BC47CB6A1C944E6F005490DE /* MFFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFoundation.m; sourceTree = "<group>"; };
 		BC47CB761C945056005490DE /* MFExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFExtras.h; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC47CC921C948B30005490DE /* libMFFoundation.a in Frameworks */,
+				BC47CC921C948B30005490DE /* libMFFoundation-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +210,7 @@
 		BC47CB661C944E6E005490DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC47CB651C944E6E005490DE /* libMFFoundation.a */,
+				BC47CB651C944E6E005490DE /* libMFFoundation-iOS.a */,
 				BC47CC8D1C948B2F005490DE /* MFFoundation Tests.xctest */,
 				BC068B031C9EB1FA00940720 /* libMFFoundation-MacOS.a */,
 			);
@@ -383,9 +383,9 @@
 			productReference = BC068B031C9EB1FA00940720 /* libMFFoundation-MacOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BC47CB641C944E6E005490DE /* MFFoundation */ = {
+		BC47CB641C944E6E005490DE /* MFFoundation-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC47CB6E1C944E6F005490DE /* Build configuration list for PBXNativeTarget "MFFoundation" */;
+			buildConfigurationList = BC47CB6E1C944E6F005490DE /* Build configuration list for PBXNativeTarget "MFFoundation-iOS" */;
 			buildPhases = (
 				BC47CB611C944E6E005490DE /* Sources */,
 				BC47CB621C944E6E005490DE /* Frameworks */,
@@ -396,9 +396,9 @@
 			);
 			dependencies = (
 			);
-			name = MFFoundation;
+			name = "MFFoundation-iOS";
 			productName = MFFoundation;
-			productReference = BC47CB651C944E6E005490DE /* libMFFoundation.a */;
+			productReference = BC47CB651C944E6E005490DE /* libMFFoundation-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		BC47CC8C1C948B2F005490DE /* MFFoundation Tests */ = {
@@ -451,7 +451,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC47CB641C944E6E005490DE /* MFFoundation */,
+				BC47CB641C944E6E005490DE /* MFFoundation-iOS */,
 				BC47CC8C1C948B2F005490DE /* MFFoundation Tests */,
 				BC201ED91C9D6305001DE14C /* MFFoundationDoc */,
 				BC068ADE1C9EB1FA00940720 /* MFFoundation-MacOS */,
@@ -532,7 +532,7 @@
 /* Begin PBXTargetDependency section */
 		BC47CC941C948B30005490DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC47CB641C944E6E005490DE /* MFFoundation */;
+			target = BC47CB641C944E6E005490DE /* MFFoundation-iOS */;
 			targetProxy = BC47CC931C948B30005490DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -617,7 +617,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_CURRENT_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
@@ -664,7 +664,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_CURRENT_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.0.1;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/MFFoundation\"/**";
@@ -768,7 +768,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC47CB6E1C944E6F005490DE /* Build configuration list for PBXNativeTarget "MFFoundation" */ = {
+		BC47CB6E1C944E6F005490DE /* Build configuration list for PBXNativeTarget "MFFoundation-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC47CB6F1C944E6F005490DE /* Debug */,
