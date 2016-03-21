@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MFFoundation"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "MFFoundation is a cross-platofrm (iOS/MacOS) Utility Library."
   s.description      = <<-DESC
                     MFFoundation is a cross-platofrm (iOS/MacOS) Utility Library.
