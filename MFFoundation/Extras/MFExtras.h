@@ -28,10 +28,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "NSArray+MFExtras.h"
-#import "NSData+MFExtras.h"
-#import "NSDate+MFExtras.h"
-#import "NSDictionary+MFExtras.h"
-#import "NSFileManager+MFExtras.h"
-#import "NSString+MFExtras.h"
+#import <MFFoundation/NSArray+MFExtras.h>
+#import <MFFoundation/NSData+MFExtras.h>
+#import <MFFoundation/NSDate+MFExtras.h>
+#import <MFFoundation/NSDictionary+MFExtras.h>
+#import <MFFoundation/NSFileManager+MFExtras.h>
+#import <MFFoundation/NSString+MFExtras.h>
 
