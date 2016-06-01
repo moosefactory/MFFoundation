@@ -100,13 +100,13 @@ Work is in progress. This disclaimer should disapear quite soon ;)
 
 ***
 
-##Installation
+## Installation
 
 MFFoundation is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
 >pod 'MFFoundation'
 
-##Author
+## Author
 
 Tristan Leblanc <tristan@moosefactory.eu>
 
@@ -117,13 +117,13 @@ Link for recruiters ( Online Resume ) : <http://tristan.moosefactory.eu>
 
 ***
 
-##Contribute
+## Contribute
 
 If you wish to contribute, check the CONTRIBUTE<CONTRIBUTE.md> file for more information.
 
 ***
 
-##License
+## License
 
 MFFoundation is available under the MIT license. See the LICENSE file for more info.
 

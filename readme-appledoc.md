@@ -93,7 +93,7 @@ Standard C functions :
 
 ***
 
-##Author
+## Author
 
 Tristan Leblanc <tristan@moosefactory.eu>
 
@@ -102,7 +102,7 @@ Google+     :	<https://plus.google.com/+TristanLeblanc>
 
 ***
 
-##License
+## License
 
 MFFoundation is available under the MIT license. See the LICENSE file for more info.
 

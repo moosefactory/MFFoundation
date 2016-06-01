@@ -9,12 +9,7 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>MFFoundation-MacOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>MFFoundation-iOS.xcscheme</key>
+		<key>MFFoundation.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>

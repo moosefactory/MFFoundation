@@ -76,7 +76,6 @@ extern inline long double MF_modl(long double x,long double d)
 }
 
 
-
 #pragma mark - MF_clampAngle
 
 extern inline double MF_clampAngle(double angle) {
