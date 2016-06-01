@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/moosefactory/MFFoundation"
   s.license          = 'MIT'
   s.author           = { "Tristan Leblanc" => "tristan@moosefactory.eu" }
-  s.source           = { :git => "https://github.com/moosefactory/MFFoundation.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://gitlab.com/MooseFactorySoftware/MFFoundation.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/moosefactory_eu'
 
     s.ios.deployment_target = '6.0'
-    s.osx.deployment_target = '10.8'
+    s.osx.deployment_target = '10.6'
     s.requires_arc = true
 
   s.source_files = 'MFFoundation/**/*'
