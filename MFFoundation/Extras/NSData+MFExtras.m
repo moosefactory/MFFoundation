@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "NSData+MFExtras.h"
+#import <MFFoundation/NSData+MFExtras.h>
 
 
 @implementation NSData (MFExtras)

@@ -27,7 +27,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-#import "NSString+MFExtras.h"
+#import <MFFoundation/NSString+MFExtras.h>
 
 #import <CommonCrypto/CommonDigest.h>
 
@@ -72,7 +72,8 @@ THE SOFTWARE.
 #if  !__has_feature(objc_arc)
 	NSString	*uuidString = (/*__bridge*/ NSString*)CFUUIDCreateString(nil, uuidObj);
 #else
-	NSString	*uuidString = (__bridge NSString*)CFUUIDCreateString(nil, uuidObj);
+	 NSString	*uuidString =  (NSString*)CFBridgingRelease(CFUUIDCreateString(nil, uuidObj));
+    CFRelease(uuidObj);
 #endif
 	return uuidString;
 }

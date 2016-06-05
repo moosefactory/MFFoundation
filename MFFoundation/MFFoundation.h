@@ -28,6 +28,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+#ifndef h_MFFoundation
+#define h_MFFoundation
 #import <Foundation/Foundation.h>
 
 #pragma mark - C Types
@@ -42,10 +44,6 @@ THE SOFTWARE.
 
 #import <MFFoundation/MFMathUtilities.h>
 #import <MFFoundation/MFFastTrigo.h>
-
-#pragma mark - Graphics
-
-#import <MFFoundation/MFCGCombinedColor.h>
 
 #pragma mark - Date and Formatters
 
@@ -63,6 +61,7 @@ THE SOFTWARE.
 
 #import <MFFoundation/MFSystem.h>
 
+#endif
 
 @interface MFFoundation : NSObject
 

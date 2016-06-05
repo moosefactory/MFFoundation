@@ -28,13 +28,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "NSArray+MFExtras.h"
+#import <MFFoundation/NSArray+MFExtras.h>
 
 @implementation NSArray (MFExtras)
 
-/** arrayByRemovingLastObject
- * Returns a copy of the array without it's last object
- */
 
 -(NSArray*)arrayByRemovingLastObject
 {
@@ -49,10 +46,6 @@ THE SOFTWARE.
 }
 
 
-/** arrayByRemovingFirstObject
- * Returns a copy of the array without it's first object
- */
-
 -(NSArray*)arrayByRemovingFirstObject
 {
     if (self.count==0) return self;
@@ -63,16 +56,19 @@ THE SOFTWARE.
     return [NSArray arrayWithArray:array];
 }
 
-/** arrayByRemovingFirstObject
- * Returns a copy of the array without it's first object
- */
-
 
 -(NSArray*)alphabeticallySortedArray
 {
     return [self sortedArrayUsingComparator:^(id obj1, id obj2) {
         return  [obj1 compare:obj2 options:NSCaseInsensitiveSearch];
     }];
+}
+
+
+-(NSArray*)reversedArray
+{
+    NSEnumerator *enumerator = self.reverseObjectEnumerator;
+    return enumerator.allObjects;
 }
 
 @end

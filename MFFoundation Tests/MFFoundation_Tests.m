@@ -141,7 +141,7 @@
     logStr = [logStr stringByAppendingFormat:@"\rMF_min3f(-3.5f,2.9f,-1.0f) = %f",MF_min3f(-3.5f,2.9f,-1.0f)];
     logStr = [logStr stringByAppendingFormat:@"\rMF_min3f(13.5f,4.0f,1.0f) = %f",MF_min3f(13.5f,4.0f,1.0f)];
     
-    CGFloat a,b;
+    double a,b;
     MF_cartesianToPolar(4,3,&a,&b);
     logStr = [logStr stringByAppendingFormat:@"\r\rMF_cartesianToPolar(4,3) : teta=%f, phi=%f",a,b];
     MF_cartesianToPolar(-4,3,&a,&b);
@@ -181,6 +181,10 @@
 {
     NSString* logStr = @"\r\r------------------ NSData+MFExtras ------------------\r";
     
+    logStr = [logStr stringByAppendingString:@"UUID :"];
+    logStr = [logStr stringByAppendingFormat:@"\r\r [NSString UUIDString] = %@",[NSString UUIDString]];
+    logStr = [logStr stringByAppendingFormat:@"\r\r [NSString UUIDString] = %@",[NSString UUIDString]];
+
     logStr = [logStr stringByAppendingString:@"\rCrypting :"];
     
     
@@ -215,7 +219,7 @@
 {
     NSString* logStr = @"\r\r------------------ NSData+MFExtras ------------------\r";
     
-    logStr = [logStr stringByAppendingString:@"\Bytes :"];
+    logStr = [logStr stringByAppendingString:@"Bytes :"];
     
     NSString* str = @"0102030405AA00CDEF";
 
@@ -253,7 +257,10 @@
     logStr = [logStr stringByAppendingString:@"\r\rSort :"];
     
     logStr = [logStr stringByAppendingFormat:@"\r\r[testArray alphabeticallySortedArray] :\r%@",[testArray alphabeticallySortedArray]];
-
+    logStr = [logStr stringByAppendingString:@"\r\rReverse :"];
+    
+    logStr = [logStr stringByAppendingFormat:@"\r\r[sortedArray reversedArray] :\r%@",[[testArray alphabeticallySortedArray] reversedArray]];
+    
     logStr = [logStr stringByAppendingFormat:@"\r\r------------------ NSArray+MFExtras ------------------\r\r"];
     
     NSLog(@"%@",logStr);
@@ -310,7 +317,7 @@
     
     logStr = [logStr stringByAppendingString:@"\r\rComponents:"];
     
-    logStr = [logStr stringByAppendingFormat:@"\r\r[todayDate components] :\r%i",[todayDate components]];
+    logStr = [logStr stringByAppendingFormat:@"\r\r[todayDate components] :\r%@",[todayDate components]];
     
     logStr = [logStr stringByAppendingFormat:@"\r\r------------------ NSDate+MFExtras ------------------\r\r"];
     
@@ -321,7 +328,7 @@
 -(void)testNSFileSystem_MFExtras
 {
 //    -(BOOL)isDirectoryEmpty:(NSString*)path containsOnlyInvisibleFiles:(BOOL*)containsOnlyInvisibleFiles;
-
+/*
     NSString* logStr = @"\r\r------------------ NSFileSystem_MFExtras Will Pass Test------------------\r";
     
     NSString* path = @"~/NSFileSystem_MFExtras-TestFolder";
@@ -354,7 +361,7 @@
     logStr = [logStr stringByAppendingFormat:@"\r\r------------------ NSFileSystem_MFExtras Test Passed ------------------\r\r"];
     
     NSLog(@"%@",logStr);
-
+*/
 }
 
 - (void)testPerformanceExample {

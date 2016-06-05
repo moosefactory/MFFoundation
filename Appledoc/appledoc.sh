@@ -15,7 +15,7 @@ companyID="com.moosefactory";
 companyURL="http://www.moosefactory.eu";
 product="MFFoundation"
 target="iphoneos";
-#target="macosx";
+//target="macosx";
 
 outputPath="~/help/${company}/${product}";
 # End constants

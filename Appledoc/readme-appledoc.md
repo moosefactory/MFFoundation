@@ -84,7 +84,7 @@ Tristan Leblanc - **MooseFactory Software**<br>
 ***
 
 ### <font color='#FC2132'>Date and Formatters</font>
- 
+
 ##### [MFChronoTimeFormatter](./Documentation/MFChronoTimeFormatter.md)
 ##### [MFDateUtils](./Documentation/MFDateUtils.md)
 ##### [MFFormatters](./Documentation/MFFormatters.md)
@@ -93,7 +93,7 @@ Tristan Leblanc - **MooseFactory Software**<br>
 ***
 
 ### <font color='#FC2132'>Types</font>
- 
+
 ##### [MFTypes](./Documentation/MFTypes.md)
 ##### [MFDateRange](./Documentation/MFDateRange.md)
 ##### [MFPeriod](./Documentation/MFPeriod.md)
@@ -101,14 +101,14 @@ Tristan Leblanc - **MooseFactory Software**<br>
 ***
 
 ### <font color='#FC2132'>Maths</font>
- 
+
 ##### [MFFastTrigo](./Documentation/MFFastTrigo.md)
 ##### [MFMathUtilities](./Documentation/MFMathUtilities.md)
 
 ***
 
 ### <font color='#FC2132'>System</font>
- 
+
 ##### [MFSystem](./Documentation/MFSystem.md)
 
 ***
@@ -117,7 +117,7 @@ Tristan Leblanc - **MooseFactory Software**<br>
 
 MFFoundation is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
-	pod 'MFFoundation'
+pod 'MFFoundation'
 
 ## <font color='#1E72AD'>Author</font>
 

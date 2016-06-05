@@ -28,34 +28,104 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "NSFileManager+MFExtras.h"
+#import <MFFoundation/NSFileManager+MFExtras.h>
     
 @implementation NSFileManager (MFExtras)
 
--(BOOL)isDirectoryEmpty:(NSString*)path containsOnlyInvisibleFiles:(BOOL*)containsOnlyInvisibleFiles
+-(BOOL)isPathDirectoryEmpty:(NSString*)path  isDirectory:(BOOL*)isDirectory fileExists:(BOOL*)fileExists
 {
     BOOL isDir;
     if ( [self fileExistsAtPath:path isDirectory:&isDir] ) {
+        *fileExists = YES;
+        *isDirectory = isDir;
+        // if item is a directory, check content
         if (isDir) {
             NSError*    error;
             NSArray* contents = [self contentsOfDirectoryAtPath:path error:&error];
-            if (!contents || !contents.count) return true
-                ;
-            for (NSString* aFolderItem in contents) {
-                if ( ![self isDirectoryEmpty:[path stringByAppendingPathComponent:aFolderItem] containsOnlyInvisibleFiles:containsOnlyInvisibleFiles] ) {
-                    return false;
-                }
-            }
-            return true;
+            if (!contents || !contents.count) return true;
+            return false;
         }
+        // Not a directory , return false;
         else {
-            if (![[[path lastPathComponent] substringToIndex:1] isEqualToString:@"."]) {
-                *containsOnlyInvisibleFiles = NO;
-            }
             return false;
         }
     }
     return false;
+}
+
+
+-(BOOL)isPathDirectoryEmpty:(NSString*)path  isDirectory:(BOOL*)isDirectory fileExists:(BOOL*)fileExists recursive:(BOOL)recursive
+{
+    if (!recursive) {
+        return [self isPathDirectoryEmpty:path isDirectory:isDirectory fileExists:fileExists recursive:recursive];
+    }
+    BOOL isDir;
+    if ( [self fileExistsAtPath:path isDirectory:&isDir] ) {
+        *fileExists = YES;
+        *isDirectory = isDir;
+        // if item is a directory, check content
+        if (isDir) {
+            NSError*    error;
+            NSArray* contents = [self contentsOfDirectoryAtPath:path error:&error];
+            // if no contents, dir is empty ! return true
+            if (!contents || !contents.count) return true;
+            
+            
+            //  recursive, check items
+            for (NSString* anItem in contents) {
+                // if not item recursively empty, return false
+                BOOL exists;
+                if ( ![self isPathDirectoryEmpty:[path stringByAppendingPathComponent:anItem] isDirectory:&isDir fileExists:&exists recursive:YES]) {
+                    return false;
+                }
+            }
+            // not breaked, all items were empty directories
+            return true;
+        }
+        // Not a directory , return false;
+        else {
+            return false;
+        }
+    }
+    return false;
+}
+
+-(BOOL)directoryContainsOnlyInvisibleFiles:(NSString*)path containsInvisibleFolders:(BOOL*)containsInvisibleFolders
+{
+    BOOL isDir;
+    
+    if ( [self fileExistsAtPath:path isDirectory:&isDir] ) {
+        // if item is a directory, check content
+        NSError*    error;
+        NSArray* contents = [self contentsOfDirectoryAtPath:path error:&error];
+        for (NSString* anItem in contents) {
+            if (![[anItem substringToIndex:1] isEqualToString:@"."]) return NO;
+            
+            NSString* subPath = [path stringByAppendingPathComponent:anItem];
+            [self fileExistsAtPath:subPath isDirectory:containsInvisibleFolders];
+        }
+        return YES; // dir contains only invisible files
+    }
+    return false; // file not exists, is not dir...
+}
+
+-(BOOL)directoryContainsOnlyInvisibleFiles:(NSString*)path containsInvisibleFolders:(BOOL*)containsInvisibleFolders recursive:(BOOL)recursive
+{
+    BOOL isDir;
+    if (!recursive) {
+        return [self directoryContainsOnlyInvisibleFiles:path containsInvisibleFolders:containsInvisibleFolders];
+    }
+    if ( [self fileExistsAtPath:path isDirectory:&isDir] ) {
+        NSError*    error;
+        NSArray* contents = [self contentsOfDirectoryAtPath:path error:&error];
+        for (NSString* anItem in contents) {
+            if (![self directoryContainsOnlyInvisibleFiles:path containsInvisibleFolders:containsInvisibleFolders]) {
+                return NO;
+            }
+        }
+        return YES; // dir recursively contains only invisible files
+    }
+    return false; // file not exists, is not dir...
 }
 
 @end

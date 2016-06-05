@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "MFPeriod.h"
+#import <MFFoundation/MFPeriod.h>
 
 
 @implementation MFPeriod

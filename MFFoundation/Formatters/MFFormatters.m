@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "MFFormatters.h"
+#import <MFFoundation/MFFormatters.h>
 
 static MFMoneyFormatter* sDefaultMoneyFormatter;
 static MFDateFormatter* sDefaultDateFormatter;

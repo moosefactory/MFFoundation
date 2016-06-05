@@ -57,7 +57,7 @@ THE SOFTWARE.
 
 /** Returns a dictionary from a file in the main bundle.
  Set type to 'plist', or 'strings' to load strings files as dictionaries.
- @param name The name of the 'plist' dictionary file.
+ @param name The name of the dictionary file.
  @param type The type of file to parse - 'plist' or 'strings'.
  @return NSDictionary.
  */
@@ -86,5 +86,26 @@ THE SOFTWARE.
  @return NSArray containing sorted keys.  */
 
 -(NSArray*)alphabeticallySortedKeys;
+
+
+
+
+/** Search in an alternate dictionary in case the key is not found at first.
+ @param alternateDict The alternate dictionary.
+ @return The object with key in the dictionary, or in the alternate dictionary. NULL if not found.
+ */
+
+-(id)objectForKey:(id)aKey alternateDictionary:(NSDictionary*)alternateDict;
+
+
+
+
+/** Search in an alternate dictionary with an alternate key in case the key is not found at first.
+ @param alternateDict The alternate dictionary.
+ @param alternateKey The alternate key to use when searching in the alternate dictionary.
+ @return The object with key in the dictionary, or the object with alternate key in the alternate dictionary. NULL if not found.
+ */
+
+-(id)objectForKey:(id)aKey alternateDictionary:(NSDictionary*)alternateDict alternateKey:(NSString*)alternateKey;
 
 @end

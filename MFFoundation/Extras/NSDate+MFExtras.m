@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "NSDate+MFExtras.h"
+#import <MFFoundation/NSDate+MFExtras.h>
 
 @implementation NSDate (MFExtras)
 
@@ -43,8 +43,8 @@ THE SOFTWARE.
 {
     NSCalendar* cal = [NSCalendar autoupdatingCurrentCalendar];
     NSDateComponents* comps = [cal components:NSCalendarUnitDay+NSCalendarUnitYear+NSCalendarUnitMonth+NSCalendarUnitQuarter+NSCalendarUnitWeekday+NSCalendarUnitWeekdayOrdinal+NSCalendarUnitYearForWeekOfYear+NSCalendarUnitTimeZone+NSCalendarUnitEra fromDate:self];
-    comps.hour = hour;
-    comps.minute = minute;
+    comps.hour = hour%24;
+    comps.minute = minute%60;
     return [cal dateFromComponents:comps];
 }
 

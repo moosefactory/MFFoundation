@@ -41,15 +41,13 @@ typedef NS_OPTIONS(NSUInteger,latLongFormatterFormat) {
     LatLongFormatter_Parameters     = 0x10
 };
 
-@interface MFLatLongFormatter : NSFormatter {
-    latLongFormatterFormat	format;
-    UInt16                  decimals;
-}
+@interface MFLatLongFormatter : NSFormatter
 
 +(NSString*)degreeToLatitude:(double)degFloat;
 +(NSString*)degreeToLongitude:(double)degFloat;
 +(NSString*)deg_to_dms:(double)degfloat;
 
 @property(nonatomic,assign) latLongFormatterFormat format;
+@property(nonatomic,assign) latLongFormatterFormat decimals;
 
 @end

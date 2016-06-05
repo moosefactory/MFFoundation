@@ -30,20 +30,63 @@ THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
-#import "MFDateRange.h"
 
-@interface MFPeriod : NSObject
+/*!
+ @discussion Provides chronometer style formatting.
+ 
+ ## Version information
+ 
+ __Version__: 1.0
+ 
+ __Last update__: 2016/03/19
+ 
+ __Developer__:  Tristan Leblanc - MooseFactory Software.
+ 
+ ## Methods
+ 
+ */
 
-+(id)periodWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
--(id)initWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
+/**
+ Returns a chronometer style string, given a NSTimeInterval
+ */
 
-+(id)periodWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
--(id)initWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+@interface MFChronoTimeFormatter : NSObject
 
--(BOOL)containsDate:(NSDate*)date master:(BOOL*)master;
+/** Displays minutes even if equal to 0 ( real chrono format )
+ */
+
+@property(nonatomic,assign) BOOL displayZeros;
+
+/** Displays hours
+ */
+
+@property(nonatomic,assign) BOOL displayHours;
 
 
-    @property(nonatomic,strong) MFDateRange*    dateRange;
-    @property(nonatomic,assign) NSUInteger      periodicity;
+/** Displays seconds
+ */
+
+@property(nonatomic,assign) BOOL displaySeconds;
+
+/** Displays hours even if equal to 0
+ */
+
+@property(nonatomic,assign) BOOL displayHoursZeros;
+
+/** Displays hundredth of seconds
+ */
+
+@property(nonatomic,assign) BOOL displayHundredth;
+
+/** Displays tenth of seconds
+ */
+
+@property(nonatomic,assign) BOOL displayTenth;
+
+
+/** Displays milliseconds
+ */
+
+@property(nonatomic,assign) BOOL displayMilliseconds;
 
 @end

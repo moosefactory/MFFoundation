@@ -28,27 +28,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "MFChronoTimeFormatter.h"
+#import <Foundation/Foundation.h>
 
+#import <MFFoundation/MFDateRange.h>
 
-@implementation MFChronoTimeFormatter
+@interface MFPeriod : NSObject
 
--(NSString*)stringForObjectValue:(id)object
-{
-	long time=[object longValue];
-	long	time_sec = time / 10;
-	long h = time_sec / 3600;
-	time_sec -= h*3600;
-	long m = time_sec / 60;
-	time_sec -= m*60;
-	long s = time_sec;
-	
-	NSString	*timeStr = [[NSString alloc] init];
-	if ( h > 0 ) timeStr = [timeStr stringByAppendingFormat:@"%li:",h];
-	if ( m > 0 ) timeStr = [timeStr stringByAppendingFormat:@"%02li:",m];
-	timeStr = [timeStr stringByAppendingFormat:@"%02li.%li",s,time%10];
++(id)periodWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
 
-	return timeStr;
-}
+-(id)initWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
+
++(id)periodWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+
+-(id)initWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+
+-(BOOL)containsDate:(NSDate*)date master:(BOOL*)master;
+
+    @property(nonatomic,strong) MFDateRange*    dateRange;
+    @property(nonatomic,assign) NSUInteger      periodicity;
 
 @end

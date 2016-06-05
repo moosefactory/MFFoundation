@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "MFSystem.h"
+#import <MFFoundation/MFSystem.h>
 
 #include <errno.h>
 #include <sys/sysctl.h>

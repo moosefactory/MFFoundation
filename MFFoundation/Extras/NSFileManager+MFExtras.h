@@ -48,12 +48,53 @@ THE SOFTWARE.
 
 @interface NSFileManager (MFExtras)
 
-/** Returns true if a given directory is empty. 
- If it only contains invisible files, it returns false, but sets the boolean 'containsOnlyInvisibleFiles' to true.
- @param path The path of the item to test
- @param containsOnlyInvisibleFiles  Set to YES on output if the folder only contains invisible files
+/** Returns true if a given directory is empty.
+ @param path The path of the file item to test
+ @param isDirectory  Set to YES on output if the given path is a directory
+ @param fileExists  Set to YES on output if the file item exists
  */
 
--(BOOL)isDirectoryEmpty:(NSString*)path containsOnlyInvisibleFiles:(BOOL*)containsOnlyInvisibleFiles;
+-(BOOL)isPathDirectoryEmpty:(NSString*)path  isDirectory:(BOOL*)isDirectory fileExists:(BOOL*)fileExists;
+
+
+
+/** Returns true if a given directory is recursively empty.
+ @param path The path of the file item to test
+ @param isDirectory  Set to YES on output if the given path is a directory
+ @param fileExists  Set to YES on output if the file item exists
+ 
+ */
+
+-(BOOL)isPathDirectoryEmpty:(NSString*)path  isDirectory:(BOOL*)isDirectory fileExists:(BOOL*)fileExists recursive:(BOOL)recursive;
+
+
+
+
+/** Returns true if a given directory contains only invisible files.
+
+ return YES in containsInvisibleFolders if the folder contains invisible folders.
+ 
+ For performances reason, the algorithm breaks at first visible file.
+ So if folder does not contains only invisible files, containsInvisibleFolders has no meaning.
+ @param path The path of the item to test
+ @param containsInvisibleFolders  Set to YES on output if the folder only contains invisible files and has invisible folders
+ */
+
+-(BOOL)directoryContainsOnlyInvisibleFiles:(NSString*)path containsInvisibleFolders:(BOOL*)containsInvisibleFolders;
+
+
+/** Returns true if a given directory contains only invisible files.
+ 
+ return YES in containsInvisibleFolders if the folder contains invisible folders.
+ 
+ For performances reason, the algorithm breaks at first visible file.
+ So if folder does not contains only invisible files, containsInvisibleFolders has no meaning.
+ @param path The path of the item to test
+ @param containsInvisibleFolders  Set to YES on output if the folder only contains invisible files and has invisible folders
+ @param recursive If YES, checks recursively.
+ */
+
+-(BOOL)directoryContainsOnlyInvisibleFiles:(NSString*)path containsInvisibleFolders:(BOOL*)containsInvisibleFolders recursive:(BOOL)recursive;
+
 
 @end

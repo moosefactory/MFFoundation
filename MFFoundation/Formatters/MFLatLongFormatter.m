@@ -29,13 +29,11 @@ THE SOFTWARE.
  */
 
 #import <CoreLocation/CoreLocation.h>
-#import "MFLatLongFormatter.h"
+#import <MFFoundation/MFLatLongFormatter.h>
 
 static NSArray* cardinals;
 
 @implementation MFLatLongFormatter
-
-@synthesize format;
 
 +(void)initialize
 {
@@ -71,18 +69,18 @@ static NSArray* cardinals;
     
     NSString* longComponent = NULL;
     NSString* latComponent = NULL;
-    NSString* degString = (format & LatLongFormatter_ShowDegree) ? @"°" : @"";
+    NSString* degString = (_format & LatLongFormatter_ShowDegree) ? @"°" : @"";
     double longitude = loc.coordinate.longitude;
     double latitude = loc.coordinate.latitude;
-    if (format & LatLongFormatter_Positive) {
+    if (_format & LatLongFormatter_Positive) {
         if (longitude<0) longitude+=360.0f;
         if (latitude<0) latitude+=360.0f;
     }
-    if (format & LatLongFormatter_DMS) {
+    if (_format & LatLongFormatter_DMS) {
         longComponent = [MFLatLongFormatter degreeToLatitude:loc.coordinate.latitude],
         latComponent = [MFLatLongFormatter degreeToLongitude:loc.coordinate.longitude];
     } else
-        if (format & LatLongFormatter_EW) {
+        if (_format & LatLongFormatter_EW) {
             NSString* cardinalString;
             if (longitude<0) {
                 cardinalString = cardinals[6];
@@ -104,7 +102,7 @@ static NSArray* cardinals;
             latComponent = [NSString stringWithFormat:@"%@%@", [numberFormatter stringFromNumber:[NSNumber numberWithDouble:latitude]],degString];
         }
     
-    switch (format) {
+    switch (_format) {
         case LatLongFormatter_CommaSeparated:
             string =[NSString stringWithFormat:@"%@, %@",longComponent,latComponent];
             break;

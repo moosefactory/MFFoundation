@@ -65,4 +65,7 @@ THE SOFTWARE.
 
 -(NSArray*)alphabeticallySortedArray;
 
+
+-(NSArray*)reversedArray;
+
 @end

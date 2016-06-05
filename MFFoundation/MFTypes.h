@@ -28,30 +28,26 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+#ifndef MFTypes_h
+#define MFTypes_h
+
+typedef struct {
+    char chars[2];
+} MFCountryCode;
+
+typedef struct {
+    char chars[2];
+} MFLanguageCode;
+
+typedef struct {
+    char chars[5];
+} MFLocaleCode;
+
+typedef struct {
+    double longitude;
+    double latitude;
+    double altitude;
+} MFLocation;
 
 
-/*!
- @discussion Provides chronometer style formatting.
- 
- ## Version information
- 
- __Version__: 1.0
- 
- __Last update__: 2016/03/19
- 
- __Developer__:  Tristan Leblanc - MooseFactory Software.
- 
- ## Methods
- 
- */
-
-/**
- Returns a chronometer style string, given a NSTimeInterval
- */
-
-@interface MFChronoTimeFormatter : NSObject {
-
-}
-
-@end
+#endif /* MFTypes_h */

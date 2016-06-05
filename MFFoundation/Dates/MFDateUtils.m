@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "MFDateUtils.h"
+#import <MFFoundation/MFDateUtils.h>
 
 static const NSInteger MFDateSecsPerDay = 24*60*60;
 

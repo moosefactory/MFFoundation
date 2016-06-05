@@ -28,18 +28,27 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#ifndef MFTypes_h
-#define MFTypes_h
+#import <Foundation/Foundation.h>
 
-typedef struct {
-    char chars[2];
-} MFCountryCode;
+@interface MFDateRange : NSObject
 
-typedef struct {
-    double longitude;
-    double latitude;
-    double altitude;
-} MFLocation;
++(id)dateRangeWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
 
+-(id)initWithStartDate:(NSDate*)startDate endDate:(NSDate*)endDate;
 
-#endif /* MFTypes_h */
++(id)dateRangeWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+
+-(id)initWithDayDate:(NSDate*)dayDate startHour:(NSUInteger)startHour startMinute:(NSUInteger)startMinute endHour:(NSUInteger)endHour endMinute:(NSUInteger)endMinute;
+
+-(BOOL)containsDayWithComponents:(NSDateComponents*)comps inCalendar:(NSCalendar*)cal;
+-(BOOL)containsDate:(NSDate*)date;
+
+-(void)startHour:(NSUInteger*)hours minutes:(NSUInteger*)minutes;
+-(void)endHour:(NSUInteger*)hours minutes:(NSUInteger*)minutes;
+
+-(NSTimeInterval)duration;
+
+@property(nonatomic,strong) NSDate* startDate;
+@property(nonatomic,strong) NSDate* endDate;
+
+@end

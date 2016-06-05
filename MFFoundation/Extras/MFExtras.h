@@ -28,6 +28,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
+#ifndef MFExtras_h
+#define MFExtras_h
+
 #import <MFFoundation/NSArray+MFExtras.h>
 #import <MFFoundation/NSData+MFExtras.h>
 #import <MFFoundation/NSDate+MFExtras.h>
@@ -35,3 +38,4 @@ THE SOFTWARE.
 #import <MFFoundation/NSFileManager+MFExtras.h>
 #import <MFFoundation/NSString+MFExtras.h>
 
+#endif

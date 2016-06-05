@@ -48,30 +48,41 @@ THE SOFTWARE.
 
 @interface NSString ( MFExtras )
 
-/** Returns the UUID of the device.
- @return UUID of the device as NSString
+/** Creates a Universally Unique Identifier (UUID)
+ @returns a unique ID string.
  */
 
-    +(NSString*)UUIDString;
++(NSString*)UUIDString;
+
+
 
 /** Returns the md5 hash of the string.
  @return NSString
  */
 
-	-(NSString*)md5;
+-(NSString*)md5;
+
+
+
 
 /** Returns the sha1 hash of the string.
  @return NSString
  */
 
-    -(NSString *)sha1;
+-(NSString *)sha1;
+
+
 
 /** Returns true if passed eMail is valid. 
  Pass true in the 'strict' parameter to do a strict checking
  @param strict Set to YES for strict eMail checking
  @return BOOL - YES if email syntax is valid
  */
-    -(BOOL)isValidEmail:(BOOL)strict;
+
+-(BOOL)isValidEmail:(BOOL)strict;
+
+
+
 
 /**Returns true if the string is a correct name ( Roman language only )
  @return BOOL - YES if name syntax is valid
@@ -79,16 +90,20 @@ THE SOFTWARE.
 
 -(BOOL)isValidName;
 
+
+
 /** Convenient function to add escape percent characters (to use in an url string)
  @return NSString containing percent escapes
  */
 
-    -(NSString*)urlEncode;
+-(NSString*)urlEncode;
+
+
 
 /** Convenient function to decode an url style string ( with escape percent characters)
 @return NSString 
  */
 
-    -(NSString*)urlDecode;
+-(NSString*)urlDecode;
 
 @end

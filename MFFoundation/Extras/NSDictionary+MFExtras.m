@@ -28,8 +28,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-#import "NSDictionary+MFExtras.h"
-#import "NSArray+MFExtras.h"
+#import <MFFoundation/NSDictionary+MFExtras.h>
+#import <MFFoundation/NSArray+MFExtras.h>
 
 @implementation NSDictionary (MFExtras)
 
@@ -77,6 +77,26 @@ THE SOFTWARE.
 {
     return [[self allKeys] alphabeticallySortedArray];
 }
+
+
+-(id)objectForKey:(id)aKey alternateDictionary:(NSDictionary*)alternateDict
+{
+    id object = [self objectForKey:aKey];
+    if (!object && alternateDict) {
+        object = [alternateDict objectForKey:aKey];
+    }
+    return object;
+}
+
+-(id)objectForKey:(id)aKey alternateDictionary:(NSDictionary*)alternateDict alternateKey:(NSString*)alternateKey
+{
+    id object = [self objectForKey:aKey];
+    if (!object && alternateDict) {
+        object = [alternateDict objectForKey:alternateKey];
+    }
+    return object;
+}
+
 
 @end
 
