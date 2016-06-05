@@ -133,7 +133,6 @@
 		BCBD03BD1D035ACA0003ECA8 /* appledoc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = appledoc.sh; sourceTree = "<group>"; };
 		BCBD03BE1D035ACA0003ECA8 /* headerdoc-make.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "headerdoc-make.sh"; sourceTree = "<group>"; };
 		BCBD03BF1D035ACA0003ECA8 /* readme-appledoc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "readme-appledoc.md"; sourceTree = "<group>"; };
-		BCF768C41C95F6E600DED52C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BCF768C51C961CC800DED52C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BCF768C61C961CC800DED52C /* MFFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MFFoundation.podspec; sourceTree = "<group>"; };
 		BCF9C8F01D04196D00A25F72 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
@@ -150,6 +149,7 @@
 		BCF9C9041D04620100A25F72 /* MFFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFFormatters.m; sourceTree = "<group>"; };
 		BCF9C9051D04620100A25F72 /* MFLatLongFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLatLongFormatter.h; sourceTree = "<group>"; };
 		BCF9C9061D04620100A25F72 /* MFLatLongFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLatLongFormatter.m; sourceTree = "<group>"; };
+		BCF9C9141D04764C00A25F72 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +174,9 @@
 		BC47CB5C1C944E6D005490DE = {
 			isa = PBXGroup;
 			children = (
+				BCF9C9141D04764C00A25F72 /* README.md */,
 				BCF768C51C961CC800DED52C /* LICENSE */,
 				BCF768C61C961CC800DED52C /* MFFoundation.podspec */,
-				BCF768C41C95F6E600DED52C /* README.md */,
 				BC8E11EC1C96D2290044F3B4 /* CONTRIBUTE.md */,
 				BCBD03BC1D035ACA0003ECA8 /* Appledoc */,
 				BC47CB671C944E6E005490DE /* MFFoundation */,
