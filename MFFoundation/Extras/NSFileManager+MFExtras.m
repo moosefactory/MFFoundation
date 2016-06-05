@@ -119,7 +119,8 @@ THE SOFTWARE.
         NSError*    error;
         NSArray* contents = [self contentsOfDirectoryAtPath:path error:&error];
         for (NSString* anItem in contents) {
-            if (![self directoryContainsOnlyInvisibleFiles:path containsInvisibleFolders:containsInvisibleFolders]) {
+            NSString* subPath = [path stringByAppendingPathComponent:anItem];
+            if (![self directoryContainsOnlyInvisibleFiles:subPath containsInvisibleFolders:containsInvisibleFolders]) {
                 return NO;
             }
         }
