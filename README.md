@@ -1,5 +1,10 @@
 ![MacDown logo](./Documentation/MFFoundation_Header.png)
-
+<br><br>
+*This framework is deprecated, and is replaced by MoofFOundation:*
+https://gitlab.com/MooseFactoryFrameworks/MoofFoundation
+<br><br>
+----
+<br>
 **Utility library ( static ) based on NSFoundation**<br>
 *Fits for any apple system : iOS, MacOS, WatchOS, tvOS*
 <br><br>
