@@ -1,6 +1,6 @@
 ![MacDown logo](./Documentation/MFFoundation_Header.png)
 <br><br>
-*This framework is deprecated, and is replaced by MoofFOundation:*
+*This framework is deprecated, and is replaced by MoofFoundation:*
 https://gitlab.com/MooseFactoryFrameworks/MoofFoundation
 <br><br>
 ----
