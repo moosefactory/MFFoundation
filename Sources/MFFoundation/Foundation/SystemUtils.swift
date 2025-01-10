@@ -1,10 +1,9 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
 //  SystemUtils.swift
 //  Created by Tristan Leblanc on 28/09/2020.
 

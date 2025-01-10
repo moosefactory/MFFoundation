@@ -1,13 +1,11 @@
 // swift-tools-version: 5.9
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory
+//    Software
+//  ------------------------------------------
 
 import PackageDescription
 

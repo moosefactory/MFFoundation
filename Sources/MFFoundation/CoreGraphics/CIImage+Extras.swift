@@ -1,19 +1,10 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v1.1           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2021 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software   tristan at moosefactory dot eu                   */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
 
-// CIImage+Extras
-// MoofFoundation
-
-//  Lidar.swift
-//  TerrainMesh
-//
-//  Created by Tristan Leblanc on 05/01/2025.
-//
 import CoreGraphics
 import CoreImage
 

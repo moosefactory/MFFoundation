@@ -1,10 +1,9 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
 //  Conversions.swift
 //  Created by Tristan Leblanc on 20/11/2020.
 
@@ -31,7 +30,11 @@ public extension CGFloat {
     var clampToFractional: CGFloat {
         return Swift.max(CGFloat(-1), Swift.min(CGFloat(1), self))
     }
-    
+}
+
+// MARK: Misc Operations
+
+public extension CGFloat {
     @_transparent
     func bary(to: CGFloat, fraction: CGFloat = 0.5) -> CGFloat {
         let f = fraction.clampToPositiveFractional
@@ -42,6 +45,7 @@ public extension CGFloat {
 // MARK: Degrees / radians conversions
 
 public extension CGFloat {
+    
     static let degToRadFactor = CGFloat.pi / 180
     var degreeToRadian: CGFloat { return self * CGFloat.degToRadFactor }
     var radianToDegree: CGFloat { return self / CGFloat.degToRadFactor }
@@ -54,6 +58,7 @@ public extension Float {
 }
 
 // MARK: Low pass filter
+
 public extension CGFloat {
     func lowPassFilter(k: CGFloat = 0.96, value: inout CGFloat) {
         value = ((1 - k) * self) + (k * value)
@@ -65,7 +70,5 @@ public extension Double {
         value = ((1 - k) * self) + (k * value)
     }
 }
-
-
 
 #endif

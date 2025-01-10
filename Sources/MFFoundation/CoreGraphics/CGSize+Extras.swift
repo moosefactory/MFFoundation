@@ -1,10 +1,9 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
 // CGSize+Extras
 // Created by Tristan Leblanc on 13/04/2021.
 
@@ -85,10 +84,10 @@ public extension CGSize {
 public extension CGSize {
     
     /// Converts to point
-    var toPoint: CGPoint { return CGPoint(x: width, y: height)}
+    var asPoint: CGPoint { return CGPoint(x: width, y: height)}
 
     /// Converts to point
-    var toRect: CGRect { return CGRect(origin: .zero, size: self) }
+    var asRect: CGRect { return CGRect(origin: .zero, size: self) }
 
     /// returns dimensions as numbers
     var asNumbers: (NSNumber, NSNumber) {

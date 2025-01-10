@@ -1,10 +1,9 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
 //  Image+Extras.swift
 //  Created by Tristan Leblanc on 07/12/2020.
 
@@ -32,7 +31,22 @@ public extension UIImage {
         }
         return cgImage
     }
+    
+    convenience init(cgImage: CGImage, size: CGSize) {
+        do {
+            let scaledContext = try BitmapUtils.createBitMap(size: size)
+            scaledContext.draw(cgImage, in: size.asRect, byTiling: false)
+            let cgImage = scaledContext.makeImage()
+            self.init(cgImage: cgImage!)
+        }
+        catch {
+            self.init(cgImage: cgImage)
+        }
+    }
+
 }
+
+
 #endif
 
 // MARK: - Images

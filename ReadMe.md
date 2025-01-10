@@ -1,36 +1,37 @@
 # MFFoundation
 *Used for years. Recrafted with care.*
 
-![MacDown logo](Icon_128.png)
-
 **NSFoundation** and **CoreGraphics** helpers.
 
-MFFoundation is a collection of must have extensions for swift. 
+#### MFFoundation is a collection of must have extensions for. 
 
 
 ## Classes
 
-### CoreGraphics
-
-CGSize+Extras.swift
-CGContext+Bitmap.swift
-CGFloat+Extras.swift
-CGGeometry+Operators.swift
-CGPoint+Extras.swift
-CGRect+Extras.swift
-
 ### Foundation
 
-Codable+JSON.swift
-FileManager+Extras.swift
-FileWrapper+Extras.swift
-Formatters.swift
-Image+Extras.swift
-MFFoundation.swift
-Random.swift
-String+Extras.swift
-SystemUtils.swift
-URL+Extras.swift
+#### Codable+JSON
+
+
+
+#### FileManager+Extras
+#### FileWrapper+Extras
+#### Formatters
+#### Image+Extras
+#### MFFoundation
+#### Random
+#### String+Extras
+#### SystemUtils
+#### URL+Extras
+
+### CoreGraphics
+
+#### CGSize+Extras
+#### CGContext+Bitmap
+#### CGFloat+Extras
+#### CGGeometry+Operators
+#### CGPoint+Extras
+#### CGRect+Extras
 
 --
 

@@ -1,10 +1,9 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
 // CGPoint+Extras
 // Created by Tristan Leblanc on 13/04/2021.
 
@@ -16,9 +15,11 @@ import QuartzCore
 // MARK: Fractional conversions
 
 public extension CGPoint {
+    
     /// Returns a point in positive fractional format
     /// (0,0) is bottom left corner
     /// (1,1) is top right corner
+    
     func toPositiveFractional(in rect: CGRect) -> CGPoint {
         return CGPoint(x: (x - rect.minX) / rect.width, y: (y - rect.minY) / rect.height)
     }
@@ -31,6 +32,7 @@ public extension CGPoint {
     /// (0,0) is center
     /// (1,1) is top right corner
     /// (-1,-1) is bottom left corner
+    
     func toFractional(in rect: CGRect) -> CGPoint {
         return CGPoint(x: (x - rect.frameCenter.x) / (rect.width / 2), y: (y - rect.frameCenter.y) / (rect.height / 2))
     }

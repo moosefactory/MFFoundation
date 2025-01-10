@@ -1,25 +1,25 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
-//  NSColor+Extras.swift
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
+//  Color.swift
 //  Created by Tristan Leblanc on 27/04/2020.
 
 #if !os(watchOS)
-
 import Foundation
 import QuartzCore
-
 #if os(macOS)
 import Cocoa
 #endif
 
 // MARK: - Color/Hex Conversion
 
+
 public extension PlatformColor {
+    
+    /// Init color from an hex string
     
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
         let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
@@ -39,6 +39,8 @@ public extension PlatformColor {
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
 
+    /// Returns color hexadecimal value as # prefixed string
+    
     var hex: String {
         var r:CGFloat = 0
         var g:CGFloat = 0

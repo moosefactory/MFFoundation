@@ -1,11 +1,10 @@
-/*--------------------------------------------------------------------------*/
-/*   /\/\/\__/\/\/\        MooseFactory Foundation - Swift - v2.0           */
-/*   \/\/\/..\/\/\/                                                         */
-/*        |  |             (c)2007-2025 Tristan Leblanc                     */
-/*        (oo)                                                              */
-/* MooseFactory Software                                                    */
-/*--------------------------------------------------------------------------*/
-//  CGGeometry+Operators.swift
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
+//  CGOperators.swift
 //  Created by Tristan Leblanc on 15/10/2020.
 
 #if !os(watchOS)
@@ -15,35 +14,47 @@ import QuartzCore
 
 public extension CGPoint {
     
+    /// Adds two points ( offset first by second )
+    
     static func + (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
     }
+    
+    /// Substracts two points ( offset first by second inverse )
     
     static func - (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
     }
 
+    /// Multiply two points ( scale first by second )
+
+    static func * (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+        return CGPoint(x: lhs.x * rhs.x, y: lhs.y * rhs.y)
+    }
+
+    /// Multiply each coordinate by value ( scale )
+
     static func * (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
         return CGPoint(x: lhs.x * rhs, y: lhs.y * rhs)
     }
     
+    /// Divide each coordinates by a value ( inverse scale )
+
     static func / (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
         return CGPoint(x: lhs.x / rhs, y: lhs.y / rhs)
     }
     
+    /// Add a vector to a point ( translation )
+
     static func + (lhs: CGPoint, rhs: CGVector) -> CGPoint {
         return CGPoint(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
     }
     
+    /// Substracts a vector from a point ( translation )
+
     static func - (lhs: CGPoint, rhs: CGVector) -> CGPoint {
         return CGPoint(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
     }
-    
-    /// Point Multiply 
-    static func * (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-        return CGPoint(x: lhs.x * rhs.x, y: lhs.y * rhs.y)
-    }
-    
 }
 
 public extension CGSize {
@@ -56,6 +67,14 @@ public extension CGSize {
         return CGSize(width: lhs.width - rhs.width, height: lhs.height - rhs.height)
     }
     
+    static func * (lhs: CGSize, rhs: CGSize) -> CGSize {
+        return CGSize(width: lhs.width * rhs.width, height: lhs.height * rhs.height)
+    }
+    
+    static func / (lhs: CGSize, rhs: CGSize) -> CGSize {
+        return CGSize(width: lhs.width / rhs.width, height: lhs.height / rhs.height)
+    }
+
     static func * (lhs: CGSize, rhs: CGFloat) -> CGSize {
         return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
     }
