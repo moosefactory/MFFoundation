@@ -15,6 +15,7 @@ import QuartzCore
 /// Some bitmap utilities
 public struct BitmapUtils {
     
+    /// Some errors used in this file, and usable outside to handle classic bitmap errors
     public enum Errors: String, Error {
         /// Invalid size
         case cantCreateZeroSizeBitmap
@@ -26,7 +27,9 @@ public struct BitmapUtils {
         case cantGenerateJPEGData
     }
     
-    /// Safe Bitmap creator
+    /// Safe RGBA Bitmap creator
+    /// - Parameter size: The bitmap size in pixels
+    /// - Returns: A graphic context initialized with RGBA format
     
     public static func createBitMap(size: CGSize) throws -> CGContext {
         guard Int(size.width) >= 1 && Int(size.height) >= 1 else {
@@ -50,18 +53,20 @@ public extension CGContext {
     
     /// Simple UInt8 RGBA representation
     typealias RawRGBA = (r: UInt8, g: UInt8, b: UInt8, a: UInt8)
+    
     /// The signature of the closure passed in scanning loop
     typealias RawScanParameters = (Int, Int)->RawRGBA
+    
     /// The signature of the closure passed in scanning loop
     typealias ScanParameters = (CGPoint, inout Any?, CGAffineTransform)->RawRGBA
 
     /// Returns the context size.
-
     var size: CGSize {
         CGSize(width: width, height: height)
     }
     
     /// Overwrite pixels in bitmap by calling a components generation closure
+    /// - Parameter componentsGenerator: A closure to execute for each pixel
 
     func rawScan(componentsGenerator: RawScanParameters) {
         for y in 0..<height {
@@ -72,8 +77,12 @@ public extension CGContext {
     }
     
     /// Overwrite pixels in bitmap by calling a components generation closure
+    /// - Parameters:
+    ///   - ctm: An optional transform
+    ///   - userInfo: some user data that are propagated through the scan
+    ///   - componentsGenerator: A closure to execute for each pixel
 
-    func scan(ctm: CGAffineTransform, userInfo: inout Any?, componentsGenerator: ScanParameters) {
+    func scan(ctm: CGAffineTransform = .identity, userInfo: inout Any?, componentsGenerator: ScanParameters) {
         for y in 0..<height {
             for x in 0..<width {
                 let p = CGPoint(x: x, y: y).applying(ctm)
@@ -84,6 +93,10 @@ public extension CGContext {
     }
 
     /// Returns the pixel at given coordinates
+    /// - Parameters:
+    ///   - x: The x location
+    ///   - y: The y location
+    /// - Returns: The RGBA value of the pixel at (x,y) if location was in image, or nil.
     
     func colorComponents(x: Int, y: Int) -> (RawRGBA)? {
         guard  0<=x && x<width, 0<=y && y<height else { return nil }
@@ -94,6 +107,10 @@ public extension CGContext {
     }
 
     /// Returns the pixel at given fractionnal coordinates ( [0.0,1.0] )
+    /// - Parameters:
+    ///   - x: Fractional x location in image [0..1]
+    ///   - y: Fractional y location in image [0..1]
+    /// - Returns: The RGBA value of the pixel at (x,y) if location was in image, or nil.
 
     func colorComponents(fractionalX x: CGFloat, fractionalY y: CGFloat) -> (RawRGBA)? {
         guard  0<=x && x<=1, 0<=y && y<=1 else { return nil }
@@ -106,6 +123,10 @@ public extension CGContext {
     }
 
     /// Replace the pixel at given coordinates
+    /// - Parameters:
+    ///   - x: x location in image [0..1]
+    ///   - y: y location in image [0..1]
+    ///   - components: The RGBA value to set
     
     func setColorComponents(x: Int, y: Int, components: RawRGBA) {
         guard  0<=x && x<width, 0<=y && y<height else { return }

@@ -27,6 +27,18 @@ THE SOFTWARE. */
 
 /// MFFoundation is a collection of must have extensions for swift.
 
+#if os(macOS)
+import Cocoa
+public typealias PlatformImage = NSImage
+public typealias PlatformColor = NSColor
+public typealias PlatformFont = NSFont
+#else
+import UIKit
+public typealias PlatformImage = UIImage
+public typealias PlatformColor = UIColor
+public typealias PlatformFont = UIFont
+#endif
+
 // MARK: - Library Core -
 
 public struct MFFoundation {
@@ -35,3 +47,4 @@ public struct MFFoundation {
     public static let name = "MFFoundation"
     
 }
+

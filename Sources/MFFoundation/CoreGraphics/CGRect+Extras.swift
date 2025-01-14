@@ -86,9 +86,9 @@ public extension CGRect {
     }
     
     /// returns rect of given size, aligned to top left corner
-    func topLeftRect(width: CGFloat, height: CGFloat) -> CGRect {
-        return CGRect(x: 0, y: self.height - height, width: width, height: height)
-    }
+//    func topLeftRect(width: CGFloat, height: CGFloat) -> CGRect {
+//        return CGRect(x: 0, y: self.height - height, width: width, height: height)
+//    }
     
     /// returns hypthenuse
     var hypo: CGFloat {

@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  Random.swift
-//  Created by Tristan Leblanc on 19/11/2020.
+//  􀈿 Random.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 19/11/2020.
 
 import Foundation
 

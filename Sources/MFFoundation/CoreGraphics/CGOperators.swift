@@ -109,4 +109,36 @@ public extension CGRect {
     }
 }
 
+public extension CGVector {
+    
+    // MARK: Vector and vector operations
+
+    static func + (lhs: CGVector, rhs: CGVector) -> CGVector {
+        CGVector(dx: lhs.dx + rhs.dx, dy: lhs.dy + rhs.dy)
+    }
+    
+    static func - (lhs: CGVector, rhs: CGVector) -> CGVector {
+        CGVector(dx: lhs.dx - rhs.dx, dy: lhs.dy - rhs.dy)
+    }
+    
+    static func * (lhs: CGVector, rhs: CGVector) -> CGVector {
+        CGVector(dx: lhs.dx * rhs.dx, dy: lhs.dy * rhs.dy)
+    }
+    
+    static func / (lhs: CGVector, rhs: CGVector) -> CGVector {
+        CGVector(dx: lhs.dx / rhs.dx, dy: lhs.dy / rhs.dy)
+    }
+    
+    // MARK: Vector and float operations
+
+    static func * (lhs: CGVector, rhs: CGFloat) -> CGVector {
+        CGVector(dx: lhs.dx * rhs, dy: lhs.dy * rhs)
+    }
+    
+    static func / (lhs: CGVector, rhs: CGFloat) -> CGVector {
+        CGVector(dx: lhs.dx / rhs, dy: lhs.dy / rhs)
+    }
+
+}
+
 #endif

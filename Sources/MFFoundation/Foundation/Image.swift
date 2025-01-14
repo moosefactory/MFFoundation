@@ -1,11 +1,12 @@
 //   /\/\__/\/\      MFFoundation
 //   \/\/..\/\/      Swift Framework - v2.0
 //      (oo)
-//  MooseFactory     ©2007-2025 - Moose
-//    Software
+//  MooseFactory
+//    Software       ©2007-2025 - Moose
 //  ------------------------------------------
-//  Image+Extras.swift
-//  Created by Tristan Leblanc on 07/12/2020.
+//  􀈿 JSONCodable.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 07/12/2020.
 
 #if !os(watchOS)
 
@@ -14,23 +15,14 @@ import QuartzCore
 
 #if os(macOS)
 import Cocoa
-public typealias PlatformImage = NSImage
-public typealias PlatformColor = NSColor
-public typealias PlatformFont = NSFont
 #else
 import UIKit
-public typealias PlatformImage = UIImage
-public typealias PlatformColor = UIColor
-public typealias PlatformFont = UIFont
+#endif
+
+#if os(iOS)
 
 public extension UIImage {
     
-    func cgImage() throws -> CGImage {
-        guard let cgImage = cgImage else {
-            throw(NSError())
-        }
-        return cgImage
-    }
     
     convenience init(cgImage: CGImage, size: CGSize) {
         do {
@@ -43,7 +35,34 @@ public extension UIImage {
             self.init(cgImage: cgImage)
         }
     }
+    
+    
+    /// Throwing cgImage accessor
+    /// - Returns: The UIImage object
+    func cgImage() throws -> CGImage {
+        guard let cgImage = cgImage else {
+            throw(NSError())
+        }
+        return cgImage
+    }
 
+}
+
+#endif
+
+#if os(macOS)
+extension PlatformImage {
+    
+    /// Throwing cgImage accessor
+    /// - Returns: The CGImage
+    func cgImage() throws -> CGImage {
+        var rect = CGRect(origin: .zero, size: self.size)
+        let cgImage = cgImage(forProposedRect: &rect, context: nil, hints: nil)
+        guard let cgImage = cgImage else {
+            throw(BitmapUtils.Errors.notEnoughMemoryToCreateBitmap)
+        }
+        return cgImage
+    }
 }
 
 
@@ -53,10 +72,12 @@ public extension UIImage {
 
 public extension PlatformImage {
     
+    /// Returns a CGContext with image data
+    /// - Returns: The CGContext
     func bitmap() throws -> CGContext  {
         let bitmap = try BitmapUtils.createBitMap(size: size)
+        let rect = bitmap.size.asRect
         let cg = try cgImage()
-        let rect = bounds
         bitmap.draw(cg, in: rect, byTiling: false)
         return bitmap
     }
@@ -67,7 +88,7 @@ public extension PlatformImage {
 }
 
 public extension CGImage {
-
+    
     var size: CGSize {
         return CGSize(width: width, height: height)
     }
@@ -83,21 +104,13 @@ public extension CGImage {
 }
 
 public extension NSImage {
-
-    func cgImage() throws -> CGImage {
-        var rect = bounds
-        guard let cgImage = self.cgImage(forProposedRect: &rect, context: nil, hints: nil) else {
-            throw BitmapUtils.Errors.cantMakeCGImageFromNSImage
-        }
-        return cgImage
-    }
     
     func jpegData(quality: CGFloat = 0.5) throws -> Data {
         let cg = try cgImage()
         let bitmapRep = NSBitmapImageRep(cgImage: cg)
         guard let jpegData = bitmapRep.representation(using: NSBitmapImageRep.FileType.jpeg,
                                                       properties: [NSBitmapImageRep.PropertyKey.compressionFactor :  NSNumber(value: Double(quality))]) else {
-                                                        throw BitmapUtils.Errors.cantGenerateJPEGData
+            throw BitmapUtils.Errors.cantGenerateJPEGData
         }
         return jpegData
     }

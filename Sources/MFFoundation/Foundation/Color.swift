@@ -16,10 +16,12 @@ import Cocoa
 
 // MARK: - Color/Hex Conversion
 
-
 public extension PlatformColor {
     
     /// Init color from an hex string
+    /// - Parameters:
+    ///   - hexString: the hexadecimal color code, starting by # or not
+    ///   - alpha: an optional parameter to return color with alpha
     
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
         let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

@@ -1,6 +1,9 @@
 import Testing
 @testable import MFFoundation
 
-@Test func example() async throws {
+import Foundation
+
+@Test func String() async throws {
+    
     // Write your test here and use APIs like `#expect(...)` to check expected conditions.
 }

@@ -4,15 +4,16 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  String.swift
-//  Created by Tristan Leblanc on 20/11/2020.
+//  􀈿 String.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 20/11/2020.
 
 import Foundation
 
 //MARK: - String
 
 public extension String {
-    
+            
     /// Returns a NSString version
     var ns: NSString {
         return NSString(string: self)
@@ -23,6 +24,16 @@ public extension String {
         self.data(using: .utf8) ?? Data()
     }
     
+    // The string array length
+    var utf8Length: Int {
+        count
+    }
+    
+    /// The length in number of utf16 characters
+    var utf16Length: Int {
+        utf16.count
+    }
+
     /// Removes space characters in string
     var byRemovingSpaces: String {
         replacingOccurrences(of: " ", with: "")
@@ -32,14 +43,8 @@ public extension String {
     var byRemovingTabs: String {
         replacingOccurrences(of: "\t", with: "")
     }
-    
-    /// Removes all non digit or comma characters and replace "," by "."
-    
-    var asRawDecimalNumberString: String {
-        return filteringCharacters(in: CharacterSet(charactersIn: "0123456789.,")).replacingOccurrences(of: ",", with: ".")
-    }
 
-    /// Removes all non digit characters
+/// Removes all non digit characters
     
     var asRawIntegerNumberString: String {
         return filteringCharacters(in: CharacterSet(charactersIn: "0123456789"))
@@ -105,5 +110,62 @@ public extension String {
 }
 
 
+// MARK: - CSV Utilities
 
+public extension String {
+    
+    var csvComponents: [String] {
+        split(separator: ";").map { String($0) }
+    }
+    
+    var tsvComponents: [String] {
+        split(separator: "\t").map { String($0) }
+    }
+    
+    var lines: [String] {
+        split(separator: "\r").map { String($0) }
+    }
+}
 
+public extension Array where Element == String {
+    
+    var asCSV: String {
+        return joinedByComma
+    }
+    
+    var asTSV: String {
+        return joinedByTab
+    }
+
+    var joinedByComma: String {
+        return joined(separator: ";")
+    }
+    
+    var joinedBySpace: String {
+        return joined(separator: " ")
+    }
+    
+    var joinedByDot: String {
+        return joined(separator: ".")
+    }
+    
+    var joinedByDash: String {
+        return joined(separator: "-")
+    }
+    
+    var joinedByUnderscore: String {
+        return joined(separator: "_")
+    }
+    
+    var joinedByReturn: String {
+        return joined(separator: "\r")
+    }
+    
+    var joinedByTab: String {
+        return joined(separator: "\t")
+    }
+    
+    var joinedBySlash: String {
+        return joined(separator: "/")
+    }
+}
