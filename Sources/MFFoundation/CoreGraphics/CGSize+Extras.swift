@@ -23,8 +23,12 @@ public extension CGSize {
         CGSize(width: dimension, height: dimension)
     }
 
-    static func square(_ dimension: Int) -> CGSize {
-        CGSize(width: dimension, height: dimension)
+    init(_ dimension: CGFloat){
+        self.init(width: dimension, height: dimension)
+    }
+
+    init(_ dimension: Int){
+        self.init(width: dimension, height: dimension)
     }
 
     /// Returns the diagonal length in a rectangle of this size

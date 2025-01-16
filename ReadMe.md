@@ -11,9 +11,6 @@
 ### Foundation
 
 #### Codable+JSON
-
-
-
 #### FileManager+Extras
 #### FileWrapper+Extras
 #### Formatters
@@ -26,12 +23,16 @@
 
 ### CoreGraphics
 
+Brings some syntaxic sugars and practical extensions upon **CoreGraphics**
 #### CGSize+Extras
 #### CGContext+Bitmap
 #### CGFloat+Extras
 #### CGGeometry+Operators
 #### CGPoint+Extras
 #### CGRect+Extras
+
+#### CIImage+Extras.swift
+#### PixelsUnitsConversion.swift
 
 --
 
