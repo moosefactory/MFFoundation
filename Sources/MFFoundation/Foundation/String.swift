@@ -45,7 +45,10 @@ public extension String {
     }
 
 /// Removes all non digit characters
-    
+    var asRawDecimalNumberString: String {
+        return filteringCharacters(in: CharacterSet(charactersIn: "0123456789.,")).replacingOccurrences(of: ",", with: ".")
+    }
+
     var asRawIntegerNumberString: String {
         return filteringCharacters(in: CharacterSet(charactersIn: "0123456789"))
     }

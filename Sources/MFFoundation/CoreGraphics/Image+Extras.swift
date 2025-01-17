@@ -10,25 +10,15 @@
 
 import CoreGraphics
 import CoreImage
+#if os(iOS)
+    import UIKit
+#elseif os(macOS)
+    import Cocoa
+#endif
 
 // Some various image conversion utilities
 // TODO: CLEAN THIS UP!
 
-#if os(macOS)
-import Cocoa
-
-extension NSImage {
-    
-    // To match the UIImage version
-    
-    convenience init(cgImage: CGImage) {
-        self.init(cgImage: cgImage, size: cgImage.size)
-    }
-}
-
-#else
-import UIKit
-#endif
 
 public extension CIImage {
     
@@ -36,14 +26,10 @@ public extension CIImage {
     func toUIImage() -> UIImage? {
         toPlatformImage()
     }
-#endif
-    
-    
-#if os(macOS)
-    func toNSImage(inputImage: CIImage) -> NSImage? {
+#elseif os(macOS)
+    func toNSImage() -> NSImage? {
         toPlatformImage()
     }
-    
 #endif
     
     /// This function is particularly useful to create images coming from io surfaces or other textures that do not point on a buffer in app memory.

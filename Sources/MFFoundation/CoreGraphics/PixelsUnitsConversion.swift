@@ -9,10 +9,8 @@
 //  􀓣 Created by Tristan Leblanc on 07/12/2020.
 
 #if !os(watchOS)
-
 import Foundation
 import QuartzCore
-
 #if os(macOS)
 import Cocoa
 #endif
