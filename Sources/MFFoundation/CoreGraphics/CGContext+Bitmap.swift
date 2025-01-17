@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-// Bitmap.swift
-// Created by Tristan Leblanc on 18/11/2020.
+//  􀈿 CGContext+Bitmap.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 18/11/2020.
 
 #if !os(watchOS)
 
@@ -48,17 +49,17 @@ public struct BitmapUtils {
     }
 }
 
+/// Simple UInt8 RGBA representation
+public typealias RGBATuplet = (r: UInt8, g: UInt8, b: UInt8, a: UInt8)
+
+/// The signature of the closure passed in scanning loop
+public typealias CGContextRawScanParameters = (Int, Int)->RGBATuplet
+
+/// The signature of the closure passed in scanning loop
+public typealias CGContextScanParameters = (CGPoint, inout Any?, CGAffineTransform)->RGBATuplet
+
 
 public extension CGContext {
-    
-    /// Simple UInt8 RGBA representation
-    typealias RawRGBA = (r: UInt8, g: UInt8, b: UInt8, a: UInt8)
-    
-    /// The signature of the closure passed in scanning loop
-    typealias RawScanParameters = (Int, Int)->RawRGBA
-    
-    /// The signature of the closure passed in scanning loop
-    typealias ScanParameters = (CGPoint, inout Any?, CGAffineTransform)->RawRGBA
 
     /// Returns the context size.
     var size: CGSize {
@@ -68,7 +69,7 @@ public extension CGContext {
     /// Overwrite pixels in bitmap by calling a components generation closure
     /// - Parameter componentsGenerator: A closure to execute for each pixel
 
-    func rawScan(componentsGenerator: RawScanParameters) {
+    func rawScan(componentsGenerator: CGContextRawScanParameters) {
         for y in 0..<height {
             for x in 0..<width {
                 setColorComponents(x: x, y: y, components: componentsGenerator(x,y))
@@ -82,7 +83,7 @@ public extension CGContext {
     ///   - userInfo: some user data that are propagated through the scan
     ///   - componentsGenerator: A closure to execute for each pixel
 
-    func scan(ctm: CGAffineTransform = .identity, userInfo: inout Any?, componentsGenerator: ScanParameters) {
+    func scan(ctm: CGAffineTransform = .identity, userInfo: inout Any?, componentsGenerator: CGContextScanParameters) {
         for y in 0..<height {
             for x in 0..<width {
                 let p = CGPoint(x: x, y: y).applying(ctm)
@@ -98,12 +99,12 @@ public extension CGContext {
     ///   - y: The y location
     /// - Returns: The RGBA value of the pixel at (x,y) if location was in image, or nil.
     
-    func colorComponents(x: Int, y: Int) -> (RawRGBA)? {
+    func colorComponents(x: Int, y: Int) -> (RGBATuplet)? {
         guard  0<=x && x<width, 0<=y && y<height else { return nil }
         guard let uncasted_data = self.data else { return nil }
         let data: UnsafeMutablePointer<UInt8> = uncasted_data.assumingMemoryBound(to: UInt8.self)
         let offset = 4 * (y * width + x)
-        return RawRGBA(r: data[offset], g: data[offset+1], b: data[offset+2], a: data[offset+3])
+        return RGBATuplet(r: data[offset], g: data[offset+1], b: data[offset+2], a: data[offset+3])
     }
 
     /// Returns the pixel at given fractionnal coordinates ( [0.0,1.0] )
@@ -112,14 +113,14 @@ public extension CGContext {
     ///   - y: Fractional y location in image [0..1]
     /// - Returns: The RGBA value of the pixel at (x,y) if location was in image, or nil.
 
-    func colorComponents(fractionalX x: CGFloat, fractionalY y: CGFloat) -> (RawRGBA)? {
+    func colorComponents(fractionalX x: CGFloat, fractionalY y: CGFloat) -> (RGBATuplet)? {
         guard  0<=x && x<=1, 0<=y && y<=1 else { return nil }
         let x = Int(CGFloat(width) * x)
         let y = Int(CGFloat(height) * y)
         guard let uncasted_data = self.data else { return nil }
         let data: UnsafeMutablePointer<UInt8> = uncasted_data.assumingMemoryBound(to: UInt8.self)
         let offset = 4 * (y * width + x)
-        return RawRGBA(r: data[offset], g: data[offset+1], b: data[offset+2], a: data[offset+3])
+        return RGBATuplet(r: data[offset], g: data[offset+1], b: data[offset+2], a: data[offset+3])
     }
 
     /// Replace the pixel at given coordinates
@@ -128,7 +129,7 @@ public extension CGContext {
     ///   - y: y location in image [0..1]
     ///   - components: The RGBA value to set
     
-    func setColorComponents(x: Int, y: Int, components: RawRGBA) {
+    func setColorComponents(x: Int, y: Int, components: RGBATuplet) {
         guard  0<=x && x<width, 0<=y && y<height else { return }
         guard let uncasted_data = self.data else { return }
         let data: UnsafeMutablePointer<UInt8> = uncasted_data.assumingMemoryBound(to: UInt8.self)

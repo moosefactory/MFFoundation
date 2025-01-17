@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  Files.swift
-//  Created by Tristan Leblanc on 21/11/2020.
+//  􀈿 FileManager+Extras.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 21/11/2020.
 
 import Foundation
 

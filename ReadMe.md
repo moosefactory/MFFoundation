@@ -1,4 +1,7 @@
 # MFFoundation
+
+![MFFoundation logo](Icon_128.png)
+
 *Used for years. Recrafted with care.*
 
 **NSFoundation** and **CoreGraphics** helpers.

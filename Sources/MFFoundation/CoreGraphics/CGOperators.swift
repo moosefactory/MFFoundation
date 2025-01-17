@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  CGOperators.swift
-//  Created by Tristan Leblanc on 15/10/2020.
+//  􀈿 CGOperators.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 15/10/2020.
 
 #if !os(watchOS)
 

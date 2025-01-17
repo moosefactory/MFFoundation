@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  PixelsUnitsConversion.swift
-//  Created by Tristan Leblanc on 07/12/2020.
+//  􀈿 PixelsUnitsConversion.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 07/12/2020.
 
 #if !os(watchOS)
 

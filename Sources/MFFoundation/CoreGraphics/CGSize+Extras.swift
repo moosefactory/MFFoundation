@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-// CGSize+Extras
-// Created by Tristan Leblanc on 13/04/2021.
+//  􀈿 CGSize+Extras.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 13/04/2021.
 
 #if !os(watchOS)
 
