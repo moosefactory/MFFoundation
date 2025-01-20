@@ -24,6 +24,19 @@ public extension FileManager {
         }
     }
     
+    func forEachItemInDirectory(url: URL?, closure: (URL, Bool)->Void) {
+        guard let url = url, let fileURLs = try? contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: []) else {
+            return
+        }
+        for fileURL in fileURLs {
+            var isDir: ObjCBool = false
+            if fileExists(atPath: url.pathString(), isDirectory: &isDir) {
+                closure(fileURL, isDir.boolValue)
+            }
+        }
+    }
+    
+
     /// Iterate files urls in a directory
     
     func forEachFileInDirectory(url: URL?, closure: (URL)->Void) {

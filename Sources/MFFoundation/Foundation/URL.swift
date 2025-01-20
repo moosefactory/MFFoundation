@@ -29,6 +29,14 @@ public extension NSURL {
 
 public extension URL {
     
+    // TODO: Secure this!!
+    public func pathString() -> String {
+        let urlString = absoluteString
+        // let nsurl = NSURL(string: urlString)
+        // removes the "file://" prefix
+        return String(urlString.suffix(urlString.count - 7))
+    }
+    
     /// Returns the url parameters as a dictionary
     var parameters: [String: String] {
         guard
