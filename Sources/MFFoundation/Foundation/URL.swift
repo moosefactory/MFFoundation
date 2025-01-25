@@ -30,7 +30,7 @@ public extension NSURL {
 public extension URL {
     
     // TODO: Secure this!!
-    public func pathString() -> String {
+    func pathString() -> String {
         let urlString = absoluteString
         // let nsurl = NSURL(string: urlString)
         // removes the "file://" prefix
