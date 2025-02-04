@@ -12,32 +12,32 @@ import Foundation
 
 public extension Double {
     
-    /// Returns a  random value between 0 and 1
-    static func random() -> Double {
-        return Double(Double(arc4random()) / Double(UInt32.max))
-    }
-    
-    /// Returns a  random value between 0 and 1
-    static func random(_ max: Double) -> Double {
-        return max * Double(Double(arc4random()) / Double(UInt32.max))
-    }
-    
-    /// Returns a  random value between 0 and 2π
-    static func randomAngle() -> Double {
-        return Double.pi * 2 * (Double(Double(arc4random()) / Double(UInt32.max)))
-    }
-    
-    /// Returns a random value between -1 and 1
-    static func signedRandom() -> Double {
-        return Double( ((Double(arc4random()) / Double(UInt32.max)) - 0.5) * 2 )
-    }
-    
     /// Returns a random number between min and max
     static func random(min: Double = 0, max: Double = 1) -> Double {
         let r = Double(arc4random()) / Double(UInt32.max)
         return min + Double(r) * (max - min)
     }
     
+    /// Returns a  random value between 0 and max
+    static func random(_ max: Double = 1) -> Double {
+        return max * Double(arc4random()) / Double(UInt32.max)
+    }
+    
+    /// Returns a  random value between 0 and 2π
+    static func randomAngle() -> Double {
+        return Double.pi * 2 * Double(arc4random()) / Double(UInt32.max)
+    }
+    
+    /// Returns a  random value between 0 and 360
+    static func randomAngleDegrees() -> Double {
+        return 360.0 * Double(arc4random()) / Double(UInt32.max)
+    }
+
+    /// Returns a random value between -1 and 1
+    static func signedRandom(_ max: Double = 1) -> Double {
+        return 2 * max * ( ( Double(arc4random()) / Double(UInt32.max) ) - 0.5)
+    }
+
     /// Returns a random number given a possible variation centered on median value
     static func random(median: Double, variation: Double) -> Double {
         let r = Double(arc4random()) / Double(UInt32.max)
@@ -46,7 +46,7 @@ public extension Double {
     
 
     /// Returns a random number given a possible variation centered on median value
-    static func gaussion(median: Double, variation: Double) -> Double {
+    static func gaussian(median: Double, variation: Double) -> Double {
         let r = Double(arc4random()) / Double(UInt32.max)
         return median + Double(r) - variation / 2
     }
@@ -89,9 +89,24 @@ public extension UInt16 {
 
 public extension Float {
     
-    /// Returns a random float number
+    /// Returns a random number between min and max
     static func random(min: Float = 0, max: Float = 1) -> Float {
-        let x = Float(arc4random()) / Float(UInt32.max)
-        return min + Float(x) * (max - min)
+        let r = Float(arc4random()) / Float(UInt32.max)
+        return min + Float(r) * (max - min)
+    }
+    
+    /// Returns a  random value between 0 and max
+    static func random(_ max: Float = 1) -> Float {
+        return max * Float(arc4random()) / Float(UInt32.max)
+    }
+    
+    /// Returns a  random value between 0 and 2π
+    static func randomAngle() -> Float {
+        return Float.pi * 2 * Float(arc4random()) / Float(UInt32.max)
+    }
+    
+    /// Returns a random value between -1 and 1
+    static func signedRandom(_ max: Float = 1) -> Float {
+        return ((Float(arc4random()) / Float(UInt32.max)) - 0.5) * 2 * max
     }
 }

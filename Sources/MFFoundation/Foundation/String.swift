@@ -9,11 +9,17 @@
 //  􀓣 Created by Tristan Leblanc on 20/11/2020.
 
 import Foundation
+import MFFoundation
 
+#if os(macOS)
+import Cocoa
+#else
+import UIKit
+#endif
 //MARK: - String
 
 public extension String {
-            
+    
     /// Returns a NSString version
     var ns: NSString {
         return NSString(string: self)
@@ -33,32 +39,11 @@ public extension String {
     var utf16Length: Int {
         utf16.count
     }
+}
 
-    /// Removes space characters in string
-    var byRemovingSpaces: String {
-        replacingOccurrences(of: " ", with: "")
-    }
-    
-    /// Removes tab characters in string
-    var byRemovingTabs: String {
-        replacingOccurrences(of: "\t", with: "")
-    }
+// MARK: - Localization
 
-/// Removes all non digit characters
-    var asRawDecimalNumberString: String {
-        return filteringCharacters(in: CharacterSet(charactersIn: "0123456789.,")).replacingOccurrences(of: ",", with: ".")
-    }
-
-    var asRawIntegerNumberString: String {
-        return filteringCharacters(in: CharacterSet(charactersIn: "0123456789"))
-    }
-
-    /// Removes characters if they match a character in the given CharacterSet
-    
-    func filteringCharacters(in set: CharacterSet) -> String {
-        guard !isEmpty else { return self }
-        return String(unicodeScalars.filter { set.contains($0) })
-    }
+public extension String {
     
     /// Returns default localisation by using itself as a localisation key
     /// in default localization table ( localizable.string )
@@ -69,16 +54,30 @@ public extension String {
     
     /// Returns default localisation by using itself as a localisation key
     /// in given bundle and localization table
-
+    
     func localized(in bundle: Bundle? = nil, table: String? = nil) -> String {
         return (bundle ?? Bundle.main).localizedString(forKey: self, value: self, table: table)
     }
 }
 
+// MARK: - String/Path/File Names utils
+
+public extension String {
+    
+    func compactWithDots(maxLength: Int = 12) -> String {
+        guard count > maxLength else { return self }
+        return "\(prefix(maxLength / 2))…\(suffix(maxLength / 2))"
+    }
+    
+    var lastPathComponent: String {
+        NSString(string: self).lastPathComponent
+    }
+    
+}
 // MARK: - Variables matching
 
 public extension String {
-
+    
     /// Replaces variables in a string
     ///
     /// - parameters variablesDictionary
@@ -104,7 +103,7 @@ public extension String {
         }
         return out
     }
-
+    
     /// Returns string with first character trimmed
     var byRemovingFirstCharacter: String {
         guard count > 1 else { return "" }
@@ -113,7 +112,38 @@ public extension String {
 }
 
 
-// MARK: - CSV Utilities
+// MARK: - Characters Filtering
+
+public extension String {
+    
+    /// Removes space characters in string
+    var byRemovingSpaces: String {
+        replacingOccurrences(of: " ", with: "")
+    }
+    
+    /// Removes tab characters in string
+    var byRemovingTabs: String {
+        replacingOccurrences(of: "\t", with: "")
+    }
+    
+    /// Removes all non digit characters
+    var asRawDecimalNumberString: String {
+        return filteringCharacters(in: CharacterSet(charactersIn: "0123456789.,")).replacingOccurrences(of: ",", with: ".")
+    }
+    
+    var asRawIntegerNumberString: String {
+        return filteringCharacters(in: CharacterSet(charactersIn: "0123456789"))
+    }
+    
+    /// Removes characters if they match a character in the given CharacterSet
+    
+    func filteringCharacters(in set: CharacterSet) -> String {
+        guard !isEmpty else { return self }
+        return String(unicodeScalars.filter { set.contains($0) })
+    }
+}
+
+// MARK: - CSV/TSV  Utilities
 
 public extension String {
     
@@ -139,9 +169,18 @@ public extension Array where Element == String {
     var asTSV: String {
         return joinedByTab
     }
+}
 
+// MARK: - String Array Join
+
+public extension Array where Element == String {
+    
     var joinedByComma: String {
         return joined(separator: ";")
+    }
+    
+    var joined: String {
+        return joined(separator: "")
     }
     
     var joinedBySpace: String {
@@ -172,3 +211,5 @@ public extension Array where Element == String {
         return joined(separator: "/")
     }
 }
+
+
