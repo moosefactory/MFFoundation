@@ -19,7 +19,7 @@ import Cocoa
 import UIKit
 #endif
 
-#if os(iOS) || os(tvOS)
+#if !os(macOS)
 
 public extension UIImage {
     
