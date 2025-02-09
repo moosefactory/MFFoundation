@@ -9,13 +9,13 @@
 //  􀓣 Created by Tristan Leblanc on 20/11/2020.
 
 import Foundation
-import MFFoundation
 
 #if os(macOS)
 import Cocoa
 #else
 import UIKit
 #endif
+
 //MARK: - String
 
 public extension String {

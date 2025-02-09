@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  Dec3Formatter.swift
-//  Created by Tristan Leblanc on 09/10/2020.
+//  􀈿 Dec3Formatter.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 09/10/2020.
 
 #if !os(watchOS)
 

@@ -1,10 +1,12 @@
-//
-//  DateFormatter.swift
-//  MFFoundation
-//
-//  Created by Tristan Leblanc on 12/01/2025.
-//
-
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
+//  􀈿 DateFormatter.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 10/01/2025.
 
 import Foundation
 

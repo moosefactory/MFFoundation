@@ -4,7 +4,7 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  􀈿 Random.swift
+//  􀈿 NSAttributedString.swift
 //  􀐚 MFFoundation
 //  􀓣 Created by Tristan Leblanc on 12/01/2025.
 
@@ -15,7 +15,7 @@ import Cocoa
 import UIKit
 #endif
 
-extension NSAttributedString {
+public extension NSAttributedString {
     
     /// Init an attributed string from string with `.foregroundColor` attribute
     /// - Parameters:

@@ -4,14 +4,19 @@
 //  MooseFactory
 //    Software       ©2007-2025 - Moose
 //  ------------------------------------------
-//  􀈿 JSONCodable.swift
+//  􀈿 Dictionary.swift
 //  􀐚 MFFoundation
 //  􀓣 Created by Tristan Leblanc on 06/12/2020.
 
 import Foundation
-import QuartzCore
 
-extension Dictionary where Key == String, Value == Any {
+#if os(macOS)
+import Cocoa
+#else
+import UIKit
+#endif
+
+public extension Dictionary where Key == String, Value == Any {
     
     /// Returns a string from a dictionary
     /// - Parameter key: The dictionary key ( AnyHashable )

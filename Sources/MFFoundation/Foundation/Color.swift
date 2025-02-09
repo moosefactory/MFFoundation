@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  Color.swift
-//  Created by Tristan Leblanc on 27/04/2020.
+//  􀈿 Color.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 27/04/2020.
 
 #if !os(watchOS)
 import Foundation

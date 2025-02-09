@@ -11,7 +11,7 @@
 
 import Foundation
 
-//MARK: - File Wrappers Extensions
+// MARK: - File Wrappers Extensions
 
 public extension FileWrapper {
 

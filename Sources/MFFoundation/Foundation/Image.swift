@@ -51,7 +51,7 @@ public extension UIImage {
 #endif
 
 #if os(macOS)
-extension PlatformImage {
+public extension PlatformImage {
     
     /// Throwing cgImage accessor
     /// - Returns: The CGImage

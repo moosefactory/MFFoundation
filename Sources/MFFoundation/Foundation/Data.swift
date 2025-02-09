@@ -4,8 +4,9 @@
 //  MooseFactory     ©2007-2025 - Moose
 //    Software
 //  ------------------------------------------
-//  Data.swift
-//  Created by Tristan Leblanc on 10/01/2025.
+//  􀈿 Data.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 10/01/2025.
 
 import Foundation
 
