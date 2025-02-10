@@ -25,6 +25,14 @@ public extension NSAttributedString {
         self.init(string: string, attributes: [.foregroundColor: color])
     }
     
+    /// Init an attributed string from string with `.foregroundColor` and `.font`
+    /// - Parameters:
+    ///   - string: The string to convert
+    ///   - color: The expected color
+    convenience init(string: String, color: PlatformColor, font: PlatformFont) {
+        self.init(string: string, attributes: [.foregroundColor: color, .font: font])
+    }
+
     /// Init an attributed string with `.foregroundColor` attribute
     /// - Parameters:
     ///   - attributedString: The attributed string to colorize
