@@ -1,6 +1,6 @@
 # MFFoundation
 
-![MFFoundation logo](Icon_128.png)
+![MFFoundation logo](Icon.png)
 
 *Used for years. Recrafted with care.*
 
