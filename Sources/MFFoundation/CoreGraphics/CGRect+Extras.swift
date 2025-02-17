@@ -35,14 +35,14 @@ public extension CGRect {
     init(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat) {
         self.init(x: minX, y: minY, width: maxX - minX, height: maxY - minY)
     }
-
+    
     // Mark: - Alignment Utilities
     
     /// Return copy of self, centered on point
     func centered(on point: CGPoint) -> CGRect {
         return CGRect(origin: point - boundsCenter, size: size)
     }
-
+    
     func centered(in rect: CGRect) -> CGRect {
         if self == rect { return self }
         return self.centered(on: rect.frameCenter)
@@ -73,6 +73,16 @@ public extension CGRect {
         return insetBy(dx: d, dy: d)
     }
     
+    /// Returns rect with a new width
+    func with(width: CGFloat) -> CGRect {
+        CGRect(minX: minX, minY: minY, maxX: minX + width, maxY: maxY)
+    }
+    
+    /// Returns rect with a new height
+    func with(height: CGFloat) -> CGRect {
+        CGRect(minX: minX, minY: minY, maxX: maxX, maxY: minY + height)
+    }
+    
     /// Returns a copy of self, scaled up and aligned on nearest grid
     ///
     /// This is usefull to update bitmaps on memory boundaries, for optimized performances.
@@ -86,9 +96,9 @@ public extension CGRect {
     }
     
     /// returns rect of given size, aligned to top left corner
-//    func topLeftRect(width: CGFloat, height: CGFloat) -> CGRect {
-//        return CGRect(x: 0, y: self.height - height, width: width, height: height)
-//    }
+    //    func topLeftRect(width: CGFloat, height: CGFloat) -> CGRect {
+    //        return CGRect(x: 0, y: self.height - height, width: width, height: height)
+    //    }
     
     /// returns hypthenuse
     var hypo: CGFloat {
@@ -112,13 +122,13 @@ public extension CGRect {
         return insetBy(dx: dx, dy: dy)
     }
     
-    #if os(macOS)
+#if os(macOS)
     
     var ns: NSRect {
         return NSRect(x: minX, y: minY, width: width, height: height)
     }
-
-    #endif
+    
+#endif
 }
 
 // MARK: - Scale to fit / to fill -
@@ -156,7 +166,7 @@ public extension CGRect {
         CGRect(x: origin.x, y: origin.y,
                width: size.width / value, height: size.height / value)
     }
-
+    
     func divideBy(horizontaly: Int = 1, verticaly: Int = 1) -> CGRect {
         divideBy(horizontaly: CGFloat(horizontaly), verticaly: CGFloat(verticaly))
     }
@@ -165,7 +175,7 @@ public extension CGRect {
         CGRect(x: origin.x, y: origin.y,
                width: size.width / horizontaly, height: size.height / verticaly)
     }
-
+    
     func gridMoveBy(columns: Int, rows: Int) -> CGRect {
         gridMoveBy(columns: CGFloat(columns), rows: CGFloat(rows))
     }
