@@ -41,7 +41,7 @@ public extension NSView {
     }
     
     func removeAllSubviews() {
-        subviews.forEach { $0.removeFromSuperview() }
+        subviews.reversed().forEach { $0.removeFromSuperview() }
     }
 }
 
@@ -73,9 +73,9 @@ public extension NSView {
 public extension NSStackView {
     
     func removeAllArrangedSubviews() {
-        let views = arrangedSubviews
-        views.forEach {
-            self.removeArrangedSubview($0)
+        for view in arrangedSubviews.reversed() {
+            self.removeArrangedSubview(view)
+            view.removeFromSuperview()
         }
     }
 }

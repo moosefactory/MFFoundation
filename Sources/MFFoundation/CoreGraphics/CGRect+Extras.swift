@@ -38,6 +38,11 @@ public extension CGRect {
     
     // Mark: - Alignment Utilities
     
+    init(squareOfSize size: CGFloat, centeredOn point: CGPoint) {
+        let r = CGRect(origin: .zero, size: CGSize(size)).centered(on: point)
+        self.init(origin: r.origin, size: r.size)
+    }
+    
     /// Return copy of self, centered on point
     func centered(on point: CGPoint) -> CGRect {
         return CGRect(origin: point - boundsCenter, size: size)
