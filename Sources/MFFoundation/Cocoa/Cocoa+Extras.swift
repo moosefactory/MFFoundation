@@ -48,6 +48,8 @@ public extension NSView {
 
 public extension NSView {
 
+    var center: CGPoint { bounds.boundsCenter }
+
     /// Snapshot of the view
 
     func snapshotImage() -> NSImage {
