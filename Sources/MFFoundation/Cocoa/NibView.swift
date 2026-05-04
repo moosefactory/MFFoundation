@@ -1,11 +1,15 @@
-//
-//  NibView.swift
-//  OPO Model Migrator
-//
-//  Created by Tristan Leblanc on 12/11/2025.
-//
+//   /\/\__/\/\      MFFoundation
+//   \/\/..\/\/      Swift Framework - v2.0
+//      (oo)
+//  MooseFactory     ©2007-2025 - Moose
+//    Software
+//  ------------------------------------------
+//  􀈿 NibView.swift
+//  􀐚 MFFoundation
+//  􀓣 Created by Tristan Leblanc on 12/11/2025.
 
-import Foundation
+#if os(macOS)
+
 import AppKit
 
 public protocol NibView: NSView {
@@ -25,3 +29,5 @@ public extension NibView {
     }
 
 }
+
+#endif

@@ -22,7 +22,7 @@ public class GCDTimer: NSObject {
 	public init(_ interval: Double, block: @escaping () -> Void = {}, leeway: DispatchTimeInterval = DispatchTimeInterval.milliseconds(20)) {
 		timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
 		if let timer = self.timer {
-			timer.scheduleRepeating(deadline: DispatchTime.now(), interval: interval, leeway: leeway)
+            timer.schedule(deadline: DispatchTime.now(), repeating: interval, leeway: leeway)
 			timer.setEventHandler(handler: {
 				block()
 			})

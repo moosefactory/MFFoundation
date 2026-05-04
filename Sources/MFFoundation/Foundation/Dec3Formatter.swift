@@ -53,6 +53,15 @@ public extension CGFloat {
     var dec3: String { Double(self).dec3 }
 }
 
+//MARK: - 3 Decimals formatter - Usefull for logging
+
+public extension Float {
+
+    /// Returns commma separated point coordinates with 3 decimals precision
+
+    var dec3: String { Double(self).dec3 }
+}
+
 public extension Double {
     
     /// Static 3 decimals formatter

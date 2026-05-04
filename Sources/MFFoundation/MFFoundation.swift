@@ -28,7 +28,7 @@ THE SOFTWARE. */
 /// MFFoundation is a collection of must have extensions for swift.
 
 #if os(macOS)
-import Cocoa
+import AppKit
 public typealias PlatformImage = NSImage
 public typealias PlatformColor = NSColor
 public typealias PlatformFont = NSFont

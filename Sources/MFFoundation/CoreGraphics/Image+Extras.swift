@@ -13,7 +13,7 @@ import CoreImage
 #if os(iOS)
     import UIKit
 #elseif os(macOS)
-    import Cocoa
+    import AppKit
 #endif
 
 // Some various image conversion utilities

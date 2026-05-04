@@ -79,10 +79,15 @@ public extension CGRect {
     }
     
     /// Returns rect with a new width
+    func with(size: CGSize) -> CGRect {
+        CGRect(minX: minX, minY: minY, maxX: minX + size.width, maxY: size.height)
+    }
+    
+    /// Returns rect with a new width
     func with(width: CGFloat) -> CGRect {
         CGRect(minX: minX, minY: minY, maxX: minX + width, maxY: maxY)
     }
-    
+
     /// Returns rect with a new height
     func with(height: CGFloat) -> CGRect {
         CGRect(minX: minX, minY: minY, maxX: maxX, maxY: minY + height)

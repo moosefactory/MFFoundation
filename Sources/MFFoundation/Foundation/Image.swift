@@ -14,7 +14,7 @@ import Foundation
 import QuartzCore
 
 #if os(macOS)
-import Cocoa
+import AppKit
 #else
 import UIKit
 #endif

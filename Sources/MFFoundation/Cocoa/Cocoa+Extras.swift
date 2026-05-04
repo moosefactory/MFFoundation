@@ -12,7 +12,7 @@ import Foundation
 
 #if os(macOS)
 
-import Cocoa
+import AppKit
 
 
 // MARK: - Image utilities

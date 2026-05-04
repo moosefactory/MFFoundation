@@ -32,25 +32,23 @@ public extension CGSize {
         self.init(width: dimension, height: dimension)
     }
 
+    func increasedBy(dWidth: CGFloat, dHeight: CGFloat) -> CGSize {
+        CGSize(width: width+dWidth, height: height+dHeight)
+    }
+    
     /// Returns the diagonal length in a rectangle of this size
     var distanceToOrigin: CGFloat {
         return sqrt( width * width + height * height) / 2
     }
 
-    /// Returns the size mapped to fit a (1,1) square
-    var fractionalToFit: CGSize {
-        return self /  max(width, height)
-    }
+    /// Returns the size mapped to fit in a (1,1) square
+    var fractionalToFit: CGSize { self /  max(width, height) }
     
-    /// Returns the size mapped to fit a (1,1) square
-    var fractionalToFill: CGSize {
-        return self /  min(width, height)
-    }
+    /// Returns the size mapped to fill a (1,1) square
+    var fractionalToFill: CGSize { self /  min(width, height) }
     
     /// Returns the size ratio
-    var ratio: CGFloat {
-        return width / height
-    }
+    var ratio: CGFloat { width / height }
 
     /// returns scaled size fitting passed size
     ///
@@ -91,7 +89,7 @@ public extension CGSize {
     /// Converts to point
     var asPoint: CGPoint { return CGPoint(x: width, y: height)}
 
-    /// Converts to point
+    /// Converts to rect
     var asRect: CGRect { return CGRect(origin: .zero, size: self) }
 
     /// returns dimensions as numbers
