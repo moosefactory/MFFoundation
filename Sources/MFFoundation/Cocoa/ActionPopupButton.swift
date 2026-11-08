@@ -12,7 +12,7 @@
 
 import AppKit
 
-public class ActionPopupButton: NSPopUpButton {
+open class ActionPopupButton: NSPopUpButton {
     public var itemSelected: ((NSPopUpButton)->Void)!
     
     public init(frame: NSRect,

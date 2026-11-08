@@ -25,6 +25,16 @@ public extension Dictionary where Key == String, Value == Any {
         return self[key] as? String
     }
     
+    /// Returns an url from a dictionary
+    /// - Parameter key: The dictionary key ( AnyHashable )
+    /// - Returns: the url value stored at key, if any
+    func url(_ key: Key) -> URL? {
+        guard let string = self[key] as? String else {
+            return nil
+        }
+        return URL(string: string)
+    }
+    
     /// Returns a string from a dictionary
     /// - Parameter key: The dictionary key ( AnyHashable )
     /// - Returns: the int value stored at key, if any

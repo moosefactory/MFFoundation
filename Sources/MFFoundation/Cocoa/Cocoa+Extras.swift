@@ -30,17 +30,17 @@ extension NSImage {
 
 /// Operations on all subviews
 
-public extension NSView {
+@objc extension NSView {
     
-    func hideAllSubviews() {
+    public func hideAllSubviews() {
         subviews.forEach { $0.isHidden = true }
     }
     
-    func showAllSubviews() {
+    public func showAllSubviews() {
         subviews.forEach { $0.isHidden = false }
     }
     
-    func removeAllSubviews() {
+    open func removeAllSubviews() {
         subviews.reversed().forEach { $0.removeFromSuperview() }
     }
 }
